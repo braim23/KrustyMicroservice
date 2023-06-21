@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{34B3B276-CA3F-47C4-8062-86145E66EA09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{6114CFDA-3DA6-4FD4-9760-BE2ADAB1AD53}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{2306B0B0-B7D7-4B64-A51C-B3129043657B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{1D3D98A7-7C23-495B-9D73-DDA9A7ADE4D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krusty.Services.CouponAPI", "Krusty.Services.CouponAPI\Krusty.Services.CouponAPI.csproj", "{44E4E70D-5571-45D7-939E-9AEE696901AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44E4E70D-5571-45D7-939E-9AEE696901AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44E4E70D-5571-45D7-939E-9AEE696901AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44E4E70D-5571-45D7-939E-9AEE696901AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44E4E70D-5571-45D7-939E-9AEE696901AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{44E4E70D-5571-45D7-939E-9AEE696901AE} = {1D3D98A7-7C23-495B-9D73-DDA9A7ADE4D3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACA91EB2-F611-4A6F-BC75-DDDFFEE52751}
+	EndGlobalSection
+EndGlobal
