@@ -1,4 +1,4 @@
-﻿namespace Krusty.Services.CouponAPI.Models.Dto;
+﻿namespace Krusty.Web.Models;
 
 public class ResponseDto
 {

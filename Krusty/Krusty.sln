@@ -11,7 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{1D3D98A7-7C23-495B-9D73-DDA9A7ADE4D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krusty.Services.CouponAPI", "Krusty.Services.CouponAPI\Krusty.Services.CouponAPI.csproj", "{44E4E70D-5571-45D7-939E-9AEE696901AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krusty.Services.CouponAPI", "Krusty.Services.CouponAPI\Krusty.Services.CouponAPI.csproj", "{44E4E70D-5571-45D7-939E-9AEE696901AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krusty.Web", "Krusty.Web\Krusty.Web.csproj", "{40728AAB-A479-4279-BD43-1E7AAC754514}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +25,17 @@ Global
 		{44E4E70D-5571-45D7-939E-9AEE696901AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44E4E70D-5571-45D7-939E-9AEE696901AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44E4E70D-5571-45D7-939E-9AEE696901AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40728AAB-A479-4279-BD43-1E7AAC754514}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40728AAB-A479-4279-BD43-1E7AAC754514}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40728AAB-A479-4279-BD43-1E7AAC754514}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40728AAB-A479-4279-BD43-1E7AAC754514}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{44E4E70D-5571-45D7-939E-9AEE696901AE} = {1D3D98A7-7C23-495B-9D73-DDA9A7ADE4D3}
+		{40728AAB-A479-4279-BD43-1E7AAC754514} = {34B3B276-CA3F-47C4-8062-86145E66EA09}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ACA91EB2-F611-4A6F-BC75-DDDFFEE52751}
