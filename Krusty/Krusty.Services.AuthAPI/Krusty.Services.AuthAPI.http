@@ -1,0 +1,6 @@
+@Krusty.Services.AuthAPI_HostAddress = http://localhost:5296
+
+GET {{Krusty.Services.AuthAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
