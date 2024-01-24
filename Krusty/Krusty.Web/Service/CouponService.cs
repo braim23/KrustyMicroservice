@@ -1,7 +1,8 @@
 ﻿using Krusty.Web.Models;
+using Krusty.Web.Service.IService;
 using Krusty.Web.Utility;
 
-namespace Krusty.Web.Service.IService;
+namespace Krusty.Web.Service;
 
 public class CouponService : ICouponService
 {
@@ -35,7 +36,7 @@ public class CouponService : ICouponService
         return await _baseService.SendAsync(new RequestDto()
         {
             ApiType = SD.ApiType.GET,
-            Url = SD.CouponAPIBase+ "/api/coupon"
+            Url = SD.CouponAPIBase + "/api/coupon"
         });
     }
 

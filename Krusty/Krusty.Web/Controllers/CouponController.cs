@@ -9,6 +9,7 @@ namespace Krusty.Web.Controllers
     public class CouponController : Controller
     {
         private readonly ICouponService _couponService;
+        private readonly ILogger _logger;
         public CouponController(ICouponService couponService)
         {
             _couponService = couponService;

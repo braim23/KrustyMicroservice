@@ -2,12 +2,14 @@
 using Krusty.Services.CouponAPI.Data;
 using Krusty.Services.CouponAPI.Models;
 using Krusty.Services.CouponAPI.Models.Dto;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Krusty.Services.CouponAPI.Controllers;
 
 [Route("/api/coupon")]
 [ApiController]
+[Authorize]
 public class CouponAPIController : ControllerBase
 {
     private readonly AppDbContext _db;
@@ -75,6 +77,7 @@ public class CouponAPIController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize(Roles = "ADMIN")]
     public ResponseDto Post([FromBody] CouponDto couponDto)
     {
         try
@@ -94,6 +97,7 @@ public class CouponAPIController : ControllerBase
     }
 
     [HttpPut]
+    [Authorize(Roles = "ADMIN")]
     public ResponseDto Put([FromBody] CouponDto couponDto)
     {
         try
@@ -113,6 +117,7 @@ public class CouponAPIController : ControllerBase
     }
 
     [HttpDelete]
+    [Authorize(Roles = "ADMIN")]
     [Route("{id:int}")]
     public ResponseDto Delete(int id)
     {
