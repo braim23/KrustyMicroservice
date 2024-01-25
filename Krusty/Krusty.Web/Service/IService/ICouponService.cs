@@ -4,7 +4,7 @@ namespace Krusty.Web.Service.IService;
 
 public interface ICouponService
 {
-    Task<ResponseDto?> GetCoupon(string couponCode);
+    Task<ResponseDto?> GetCouponAsync(string couponCode);
     Task<ResponseDto?> GetAllCouponsAsync();
     Task<ResponseDto?> GetCouponByIdAsync(int id);
     Task<ResponseDto?> CreateCouponAsync(CouponDto couponDto);
