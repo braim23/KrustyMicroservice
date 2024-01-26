@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Krusty.Web.Models;
+﻿namespace Krusty.Services.ShoppingCartAPI.Models.Dto;
 
 public class ProductDto
 {
@@ -10,6 +8,4 @@ public class ProductDto
     public string Description { get; set; }
     public string CategoryName { get; set; }
     public string ImageUrl { get; set; }
-    [Range(1, 100)]
-    public int Count { get; set; } = 1;
 }

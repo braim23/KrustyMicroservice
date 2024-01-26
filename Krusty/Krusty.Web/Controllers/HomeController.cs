@@ -1,21 +1,51 @@
 using Krusty.Web.Models;
+using Krusty.Web.Service.IService;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Diagnostics;
 
 namespace Krusty.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+		private readonly IProductService _productService;
+		private readonly ILogger _logger;
+		public HomeController(IProductService productService)
+		{
+			_productService = productService;
+		}
 
-        public HomeController(ILogger<HomeController> logger)
+		public async Task<IActionResult> Index()
         {
-            _logger = logger;
-        }
+			List<ProductDto>? list = new();
 
-        public IActionResult Index()
+			ResponseDto response = await _productService.GetAllProductsAsync();
+			if (response != null && response.IsSuccess)
+			{
+				list = JsonConvert.DeserializeObject<List<ProductDto>>
+					(Convert.ToString(response.Result));
+			}
+			else
+			{
+				TempData["error"] = response?.Message;
+			}
+			return View(list);
+		}
+        public async Task<IActionResult> ProductDetails(int productId)
         {
-            return View();
+            ProductDto? productDtoModel = new();
+
+            ResponseDto response = await _productService.GetProductByIdAsync(productId);
+            if (response != null && response.IsSuccess)
+            {
+                productDtoModel = JsonConvert.DeserializeObject<ProductDto>
+                    (Convert.ToString(response.Result));
+            }
+            else
+            {
+                TempData["error"] = response?.Message;
+            }
+            return View(productDtoModel);
         }
 
         public IActionResult Privacy()
@@ -28,5 +58,7 @@ namespace Krusty.Web.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
     }
 }
