@@ -2,6 +2,7 @@
 using Krusty.Services.ShoppingCartAPI.Data;
 using Krusty.Services.ShoppingCartAPI.Models;
 using Krusty.Services.ShoppingCartAPI.Models.Dto;
+using Krusty.Services.ShoppingCartAPI.Service.IService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -16,13 +17,84 @@ public class CartController : ControllerBase
     private readonly ResponseDto _responseDto;
     private IMapper _mapper;
     private readonly AppDbContext _dbContext;
+    private readonly IProductService _productService;
 
-    public CartController(IMapper mapper, AppDbContext dbContext)
+    public CartController(IMapper mapper, AppDbContext dbContext, IProductService productService)
     {
         _responseDto = new ResponseDto();
         _mapper = mapper;
         _dbContext = dbContext;
+        _productService = productService;
     }
+
+
+    [HttpGet("GetCart/{userId}")]
+    public async Task<ResponseDto> GetCart(string userId)
+    {
+        try
+        {
+            CartDto cart = new()
+            {
+                CartHeader = _mapper.Map<CartHeaderDto>(_dbContext.CartHeaders.First(u => u.UserId == userId)),
+            };
+            cart.CartDetailsDto = _mapper.Map<IEnumerable<CartDetailsDto>>(_dbContext.CartDetails
+                .Where(u=>u.CartHeaderId==cart.CartHeader.CartHeaderId));
+
+            IEnumerable<ProductDto> productDtos = await _productService.GetProductsAsync();
+
+            foreach(var item in cart.CartDetailsDto)
+            {
+                item.ProductDto = productDtos.FirstOrDefault(u => u.ProductId == item.ProductId);
+                cart.CartHeader.CartTotal += (item.Count * item.ProductDto.Price);
+            }
+            _responseDto.Result = cart;
+        }
+        catch (Exception ex)
+        {
+            _responseDto.IsSuccess = false;
+            _responseDto.Message = ex.Message;
+        }
+        return _responseDto;
+    }
+
+    [HttpPost("ApplyCoupon")]
+    public async Task<Object> ApplyCoupon([FromBody] CartDto cartDto)
+    {
+        try
+        {
+            var cartFromDb = await _dbContext.CartHeaders.FirstAsync(u=>u.UserId == cartDto.CartHeader.UserId);
+            cartFromDb.CouponCode = cartDto.CartHeader.CouponCode;
+            _dbContext.CartHeaders.Update(cartFromDb);
+            _dbContext.SaveChangesAsync();
+            _responseDto.Result = true;
+        }
+        catch(Exception ex)
+        {
+            _responseDto.IsSuccess = false;
+            _responseDto.Message = ex.Message;
+        }
+        return _responseDto;
+    }
+
+    [HttpPost("RemoveCoupon")]
+    public async Task<Object> RemoveCoupon([FromBody] CartDto cartDto)
+    {
+        try
+        {
+            var cartFromDb = await _dbContext.CartHeaders.FirstAsync(u => u.UserId == cartDto.CartHeader.UserId);
+            cartFromDb.CouponCode = "";
+            _dbContext.CartHeaders.Update(cartFromDb);
+            _dbContext.SaveChangesAsync();
+            _responseDto.Result = true;
+        }
+        catch (Exception ex)
+        {
+            _responseDto.IsSuccess = false;
+            _responseDto.Message = ex.Message;
+        }
+        return _responseDto;
+    }
+
 
     [HttpPost("CartUpsert")]
     public async Task<ResponseDto> CartUpsert(CartDto cartDto)
