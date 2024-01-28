@@ -18,13 +18,15 @@ public class CartController : ControllerBase
     private IMapper _mapper;
     private readonly AppDbContext _dbContext;
     private readonly IProductService _productService;
+    private readonly ICouponService _couponService;
 
-    public CartController(IMapper mapper, AppDbContext dbContext, IProductService productService)
+    public CartController(IMapper mapper, AppDbContext dbContext, IProductService productService, ICouponService couponService)
     {
         _responseDto = new ResponseDto();
         _mapper = mapper;
         _dbContext = dbContext;
         _productService = productService;
+        _couponService = couponService;
     }
 
 
@@ -47,6 +49,20 @@ public class CartController : ControllerBase
                 item.ProductDto = productDtos.FirstOrDefault(u => u.ProductId == item.ProductId);
                 cart.CartHeader.CartTotal += (item.Count * item.ProductDto.Price);
             }
+
+
+            // Apply coupon logic
+            if(!string.IsNullOrEmpty(cart.CartHeader.CouponCode))
+            {
+                CouponDto couponDto = await _couponService.GetCouponAsync(cart.CartHeader.CouponCode);
+                if(couponDto != null && cart.CartHeader.CartTotal >= couponDto.MinAmount)
+                {
+                    cart.CartHeader.CartTotal -= couponDto.DiscountAmount;
+                    cart.CartHeader.Discount = couponDto.DiscountAmount;
+                }
+            }
+
+
             _responseDto.Result = cart;
         }
         catch (Exception ex)
