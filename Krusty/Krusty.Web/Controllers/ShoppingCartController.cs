@@ -28,6 +28,7 @@ public class ShoppingCartController : Controller
         if(response != null && response.IsSuccess)
         {
             CartDto cartDto = JsonConvert.DeserializeObject<CartDto>(Convert.ToString(response.Result));
+            return cartDto;
         }
         return new CartDto();
     }
