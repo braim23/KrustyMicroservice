@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Krusty.MessageBus;
 using Krusty.Services.ShoppingCartAPI.Data;
 using Krusty.Services.ShoppingCartAPI.Models;
 using Krusty.Services.ShoppingCartAPI.Models.Dto;
@@ -19,14 +20,18 @@ public class CartController : ControllerBase
     private readonly AppDbContext _dbContext;
     private readonly IProductService _productService;
     private readonly ICouponService _couponService;
+    private readonly IMessageBus _messageBus;
+    private readonly IConfiguration _configuration;
 
-    public CartController(IMapper mapper, AppDbContext dbContext, IProductService productService, ICouponService couponService)
+    public CartController(IMapper mapper, AppDbContext dbContext, IProductService productService, ICouponService couponService, IMessageBus messageBus, IConfiguration configuration)
     {
         _responseDto = new ResponseDto();
         _mapper = mapper;
         _dbContext = dbContext;
         _productService = productService;
         _couponService = couponService;
+        _messageBus = messageBus;
+        _configuration = configuration;
     }
 
 
@@ -101,6 +106,22 @@ public class CartController : ControllerBase
             cartFromDb.CouponCode = "";
             _dbContext.CartHeaders.Update(cartFromDb);
             _dbContext.SaveChangesAsync();
+            _responseDto.Result = true;
+        }
+        catch (Exception ex)
+        {
+            _responseDto.IsSuccess = false;
+            _responseDto.Message = ex.Message;
+        }
+        return _responseDto;
+    }
+
+    [HttpPost("EmailCartRequest")]
+    public async Task<Object> EmailCartRequest([FromBody] CartDto cartDto)
+    {
+        try
+        {
+            await _messageBus.PublishMessage(cartDto, _configuration.GetValue<string>("TopicAndQueueNames:EmailShoppingCart"));
             _responseDto.Result = true;
         }
         catch (Exception ex)
