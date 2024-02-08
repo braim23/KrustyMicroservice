@@ -1,4 +1,5 @@
-﻿using Krusty.Services.AuthAPI.Models.Dto;
+﻿using Krusty.MessageBus;
+using Krusty.Services.AuthAPI.Models.Dto;
 using Krusty.Services.AuthAPI.Service.IService;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,13 +8,17 @@ namespace Krusty.Services.AuthAPI.Controllers;
 [ApiController]
 public class AuthAPIController : Controller
 {
+    private readonly IMessageBus _messageBus;
+    private readonly IConfiguration _configuration;
     private readonly IAuthService _authService;
     protected ResponseDTO _resposeDto;
 
-    public AuthAPIController(IAuthService authService)
+    public AuthAPIController(IAuthService authService, IMessageBus messageBus, IConfiguration configuration)
     {
         _authService = authService;
         _resposeDto = new();
+        _messageBus = messageBus;
+        _configuration = configuration;
     }
 
     [HttpPost("register")]
@@ -26,7 +31,7 @@ public class AuthAPIController : Controller
             _resposeDto.Message = response;
             return BadRequest(response);
         }
-
+        await _messageBus.PublishMessage(registReqDto.Email, _configuration.GetValue<string>("TopicAndQueueNames:RegisterUserQueue"));
         return Ok(_resposeDto);
     }
 
