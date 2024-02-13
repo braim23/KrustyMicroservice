@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace Krusty.Web.Models;
+namespace Krusty.Services.OrderAPI.Models.Dto;
 
 public class CartHeaderDto
 {
@@ -10,10 +10,10 @@ public class CartHeaderDto
     public string? CouponCode { get; set; }
     public double Discount { get; set; }
     public double CartTotal { get; set; }
-    [Required]
+    //[Required]
     public string? Name { get; set; }
-    [Required]
+    //[Required]
     public string? Phone { get; set; }
-    [Required]
+    //[Required]
     public string? Email { get; set; }
 }

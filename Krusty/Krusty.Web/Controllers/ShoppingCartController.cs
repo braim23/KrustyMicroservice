@@ -10,16 +10,52 @@ namespace Krusty.Web.Controllers;
 public class ShoppingCartController : Controller
 {
     private readonly IShoppingCartService _shoppingCartService;
+    private readonly IOrderService _orderService;
 
-    public ShoppingCartController(IShoppingCartService shoppingCartService)
+    public ShoppingCartController(IShoppingCartService shoppingCartService, IOrderService orderService)
     {
         _shoppingCartService = shoppingCartService;
+        _orderService = orderService;
     }
     [Authorize]
     public async Task<IActionResult> CartIndex()
     {
         return View(await LoadCartDtoBasedOnLoggedInUser());
     }
+    [Authorize]
+    public async Task<IActionResult> Checkout()
+    {
+        return View(await LoadCartDtoBasedOnLoggedInUser());
+    }
+
+    [HttpPost]
+    [ActionName("Checkout")]
+    public async Task<IActionResult> Checkout(CartDto cartDto)
+    {
+        CartDto cart = await LoadCartDtoBasedOnLoggedInUser();
+        cart.CartHeader.Phone = cartDto.CartHeader.Phone;
+        cart.CartHeader.Email = cartDto.CartHeader.Email;
+        cart.CartHeader.Name = cartDto.CartHeader.Name;
+
+        var response = await _orderService.CreateOrder(cart);
+        OrderHeaderDto orderHeaderDto = JsonConvert.DeserializeObject<OrderHeaderDto>(Convert.ToString(response.Result));
+
+        if (response != null && response.IsSuccess)
+        {
+            // get stripe session and redirecto to stripe
+        }
+
+        return View();
+    }
+
+    //[HttpGet]
+    //[ActionName("Meow")]
+    //public IActionResult Meow()
+    //{
+    //    _orderService.Meow();
+    //    return View();
+    //}
+
     [HttpPost]
     public async Task<IActionResult> ApplyCoupon(CartDto cartDto)
     {
