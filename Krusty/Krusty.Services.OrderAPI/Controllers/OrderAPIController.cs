@@ -40,7 +40,6 @@ public class OrderAPIController : ControllerBase
             orderHeaderDto.OrderTime = DateTime.Now;
             orderHeaderDto.Status = SD.Status_Pending;
             orderHeaderDto.OrderDetailsDto = _mapper.Map<IEnumerable<OrderDetailsDto>>(cartDto.CartDetailsDto);
-            orderHeaderDto.OrderTotal = Math.Round(orderHeaderDto.OrderTotal, 2);
             OrderHeader orderCreated = _dbContext.OrderHeaders.Add(_mapper.Map<OrderHeader>(orderHeaderDto)).Entity;
             await _dbContext.SaveChangesAsync();
 

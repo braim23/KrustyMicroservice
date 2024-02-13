@@ -18,7 +18,7 @@ public class OrderService : IOrderService
         {
             ApiType = SD.ApiType.POST,
             Data = cartDto,
-            Url = SD.OrderAPIBase + "/api/order/Meow"
+            Url = SD.OrderAPIBase + "/api/order/CreateOrder"
         });
     }
 
