@@ -9,7 +9,6 @@ using Krusty.Services.ShoppingCartAPI.Service;
 using Krusty.Services.ShoppingCartAPI.Service.IService;
 using Krusty.MessageBus;
 using Krusty.Services.OrderAPI.Extensions;
-using Serilog;
 using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);

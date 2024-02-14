@@ -2,7 +2,6 @@ using Krusty.Web.Service;
 using Krusty.Web.Service.IService;
 using Krusty.Web.Utility;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
