@@ -33,9 +33,9 @@ public class ShoppingCartController : Controller
     public async Task<IActionResult> Checkout(CartDto cartDto)
     {
         CartDto cart = await LoadCartDtoBasedOnLoggedInUser();
-        cart.CartHeader.Phone = cartDto.CartHeader.Phone;
-        cart.CartHeader.Email = cartDto.CartHeader.Email;
-        cart.CartHeader.Name = cartDto.CartHeader.Name;
+        cart.CartHeaderDto.Phone = cartDto.CartHeaderDto.Phone;
+        cart.CartHeaderDto.Email = cartDto.CartHeaderDto.Email;
+        cart.CartHeaderDto.Name = cartDto.CartHeaderDto.Name;
 
         var response = await _orderService.CreateOrder(cart);
         OrderHeaderDto orderHeaderDto = JsonConvert.DeserializeObject<OrderHeaderDto>(Convert.ToString(response.Result));
@@ -71,7 +71,7 @@ public class ShoppingCartController : Controller
     [HttpPost]
     public async Task<IActionResult> RemoveCoupon(CartDto cartDto)
     {
-        cartDto.CartHeader.CouponCode = "";
+        cartDto.CartHeaderDto.CouponCode = "";
         ResponseDto? response = await _shoppingCartService.ApplyCouponAsync(cartDto);
         if (response != null && response.IsSuccess)
         {
@@ -99,7 +99,7 @@ public class ShoppingCartController : Controller
     public async Task<IActionResult> EmailCart(CartDto cartDto)
     {
         CartDto cart = await LoadCartDtoBasedOnLoggedInUser();
-        cart.CartHeader.Email = User.Claims.Where(u => u.Type == JwtRegisteredClaimNames.Email)?.FirstOrDefault()?.Value;
+        cart.CartHeaderDto.Email = User.Claims.Where(u => u.Type == JwtRegisteredClaimNames.Email)?.FirstOrDefault()?.Value;
 
         ResponseDto? response = await _shoppingCartService.EmailCart(cart);
         if (response != null && response.IsSuccess)

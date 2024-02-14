@@ -1,11 +1,11 @@
 ﻿@model CartDto
 
 <form method="post">
-    <input asp-for="CartHeader.UserId" hidden />
-    <input asp-for="CartHeader.CartHeaderId" hidden />
-    <input asp-for="CartHeader.CouponCode" hidden />
-    <input asp-for="CartHeader.Discount" hidden />
-    <input asp-for="CartHeader.CartTotal" hidden />
+    <input asp-for="CartHeaderDto.UserId" hidden />
+    <input asp-for="CartHeaderDto.CartHeaderId" hidden />
+    <input asp-for="CartHeaderDto.CouponCode" hidden />
+    <input asp-for="CartHeaderDto.Discount" hidden />
+    <input asp-for="CartHeaderDto.CartTotal" hidden />
 
     <div class="border mt-2 p-4 rounded">
         <div class="container row">
@@ -20,16 +20,16 @@
             <div class="col-7">
                 <div class="row pt-2">
                     <div class="col-12 py-2">
-                        <input asp-for="CartHeader.Name" placeholder="full name..." class="form-control" />
-                        <span asp-validation-for="CartHeader.Name" class="text-danger"></span>
+                        <input asp-for="CartHeaderDto.Name" placeholder="full name..." class="form-control" />
+                        <span asp-validation-for="CartHeaderDto.Name" class="text-danger"></span>
                     </div>
                     <div class="col-12 py-2">
-                        <input asp-for="CartHeader.Email" placeholder="email..." class="form-control" />
-                        <span asp-validation-for="CartHeader.Email" class="text-danger"></span>
+                        <input asp-for="CartHeaderDto.Email" placeholder="email..." class="form-control" />
+                        <span asp-validation-for="CartHeaderDto.Email" class="text-danger"></span>
                     </div>
                     <div class="col-12 py-2">
-                        <input asp-for="CartHeader.Phone" class="form-control" placeholder="phone number..." />
-                        <span asp-validation-for="CartHeader.Phone" class="text-danger"></span>
+                        <input asp-for="CartHeaderDto.Phone" class="form-control" placeholder="phone number..." />
+                        <span asp-validation-for="CartHeaderDto.Phone" class="text-danger"></span>
                     </div>
                     <div class="col-12 pt-2">
                         <label class="col-form-label">Order will be ready in 30minutes after placing order. If you place order when restaurant is closed it will be ready next day.</label>
@@ -73,10 +73,10 @@
                         }
                         <div class="row">
                             <div class="col-12 text-center pr-4 text-danger">
-                                Order Total :  @Model.CartHeader.CartTotal.ToString("c") <br />
-                                @if (Model.CartHeader.Discount>0)
+                                Order Total :  @Model.CartHeaderDto.CartTotal.ToString("c") <br />
+                                @if (Model.CartHeaderDto.Discount > 0)
                                 {
-                                    <span class="text-success"> Order Discount :  @Model.CartHeader.Discount.ToString("c")</span>
+                                    <span class="text-success"> Order Discount :  @Model.CartHeaderDto.Discount.ToString("c")</span>
 
                                 }
                             </div>

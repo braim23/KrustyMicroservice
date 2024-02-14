@@ -1,10 +1,10 @@
 ﻿@model CartDto
-@if(Model.CartHeader != null && Model.CartDetailsDto.Count() > 0)
+@if(Model.CartHeaderDto != null && Model.CartDetailsDto.Count() > 0)
 {
     <form method="post" asp-action="EmailCart">
         <br />
-        <input asp-for="CartHeader.UserId" hidden />
-        <input asp-for="CartHeader.CartHeaderId" hidden />
+        <input asp-for="CartHeaderDto.UserId" hidden />
+        <input asp-for="CartHeaderDto.CartHeaderId" hidden />
         <div class="">
             <div class="card border mt-4 container">
                 <div class="card-header bg-dark text-light ml-0 row ">
@@ -60,25 +60,25 @@
                     }
                     <div class="row">
                         <div class="col-6">
-                            @if (string.IsNullOrEmpty(Model.CartHeader.CouponCode))
+                            @if (string.IsNullOrEmpty(Model.CartHeaderDto.CouponCode))
                             {
                                 <span>Coupon:</span>
-                                <input asp-for="CartHeader.CouponCode" />
+                                <input asp-for="CartHeaderDto.CouponCode" />
                                 <button type="submit" asp-action="ApplyCoupon" class="btn btn-sm btn-success"> Apply </button>
                             }
                             else
                             {
                                 <span>Coupon:</span>
-                                <input asp-for="CartHeader.CouponCode" disabled />
+                                <input asp-for="CartHeaderDto.CouponCode" disabled />
                                 <button type="submit" asp-action="RemoveCoupon" class="btn btn-sm btn-danger"> Remove </button>
                             }
 
                         </div>
                         <div class="col-6 text-end">
-                            <span class="text-danger" style="font-size:21px;">  Order Total : @string.Format("{0:c}", Model.CartHeader.CartTotal) <br /></span>
-                            @if (Model.CartHeader.Discount > 0)
+                            <span class="text-danger" style="font-size:21px;">  Order Total : @string.Format("{0:c}", Model.CartHeaderDto.CartTotal) <br /></span>
+                            @if (Model.CartHeaderDto.Discount > 0)
                             {
-                                <span class="text-success"> Order Discount :  @string.Format("{0:c}", Model.CartHeader.Discount)</span>
+                                <span class="text-success"> Order Discount :  @string.Format("{0:c}", Model.CartHeaderDto.Discount)</span>
                             }
                         </div>
                     </div>

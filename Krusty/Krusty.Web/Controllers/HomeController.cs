@@ -59,7 +59,7 @@ namespace Krusty.Web.Controllers
         {
             CartDto cartDto = new CartDto()
             {
-                CartHeader = new CartHeaderDto()
+                CartHeaderDto = new CartHeaderDto()
                 {
                     UserId = User.Claims.Where(u=>u.Type == JwtClaimTypes.Subject)?.FirstOrDefault().Value
                 }

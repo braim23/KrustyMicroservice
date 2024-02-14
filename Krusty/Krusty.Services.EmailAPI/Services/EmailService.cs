@@ -21,7 +21,7 @@ public class EmailService : IEmailService
         StringBuilder message = new StringBuilder();
 
         message.AppendLine("<br/>Cart Email Requested");
-        message.AppendLine("<br/>Total " + cartDto.CartHeader.CartTotal);
+        message.AppendLine("<br/>Total " + cartDto.CartHeaderDto.CartTotal);
         message.Append("<br/>");
         message.Append("<ul>");
         foreach(var item in cartDto.CartDetailsDto)
@@ -32,7 +32,7 @@ public class EmailService : IEmailService
         }
         message.Append("</ul>");
 
-        await LogAndEmail(message.ToString(), cartDto.CartHeader.Email);
+        await LogAndEmail(message.ToString(), cartDto.CartHeaderDto.Email);
     }
 
     public async Task RegisterUserEmailAndLog(string email)

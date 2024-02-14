@@ -42,28 +42,28 @@ public class CartController : ControllerBase
         {
             CartDto cart = new()
             {
-                CartHeader = _mapper.Map<CartHeaderDto>(_dbContext.CartHeaders.First(u => u.UserId == userId)),
+                CartHeaderDto = _mapper.Map<CartHeaderDto>(_dbContext.CartHeaders.First(u => u.UserId == userId)),
             };
             cart.CartDetailsDto = _mapper.Map<IEnumerable<CartDetailsDto>>(_dbContext.CartDetails
-                .Where(u=>u.CartHeaderId==cart.CartHeader.CartHeaderId));
+                .Where(u=>u.CartHeaderId==cart.CartHeaderDto.CartHeaderId));
 
             IEnumerable<ProductDto> productDtos = await _productService.GetProductsAsync();
 
             foreach(var item in cart.CartDetailsDto)
             {
                 item.ProductDto = productDtos.FirstOrDefault(u => u.ProductId == item.ProductId);
-                cart.CartHeader.CartTotal += (item.Count * item.ProductDto.Price);
+                cart.CartHeaderDto.CartTotal += (item.Count * item.ProductDto.Price);
             }
 
 
             // Apply coupon logic
-            if(!string.IsNullOrEmpty(cart.CartHeader.CouponCode))
+            if(!string.IsNullOrEmpty(cart.CartHeaderDto.CouponCode))
             {
-                CouponDto couponDto = await _couponService.GetCouponAsync(cart.CartHeader.CouponCode);
-                if(couponDto != null && cart.CartHeader.CartTotal >= couponDto.MinAmount)
+                CouponDto couponDto = await _couponService.GetCouponAsync(cart.CartHeaderDto.CouponCode);
+                if(couponDto != null && cart.CartHeaderDto.CartTotal >= couponDto.MinAmount)
                 {
-                    cart.CartHeader.CartTotal -= couponDto.DiscountAmount;
-                    cart.CartHeader.Discount = couponDto.DiscountAmount;
+                    cart.CartHeaderDto.CartTotal -= couponDto.DiscountAmount;
+                    cart.CartHeaderDto.Discount = couponDto.DiscountAmount;
                 }
             }
 
@@ -83,8 +83,8 @@ public class CartController : ControllerBase
     {
         try
         {
-            var cartFromDb = await _dbContext.CartHeaders.FirstAsync(u=>u.UserId == cartDto.CartHeader.UserId);
-            cartFromDb.CouponCode = cartDto.CartHeader.CouponCode;
+            var cartFromDb = await _dbContext.CartHeaders.FirstAsync(u=>u.UserId == cartDto.CartHeaderDto.UserId);
+            cartFromDb.CouponCode = cartDto.CartHeaderDto.CouponCode;
             _dbContext.CartHeaders.Update(cartFromDb);
             _dbContext.SaveChangesAsync();
             _responseDto.Result = true;
@@ -102,7 +102,7 @@ public class CartController : ControllerBase
     {
         try
         {
-            var cartFromDb = await _dbContext.CartHeaders.FirstAsync(u => u.UserId == cartDto.CartHeader.UserId);
+            var cartFromDb = await _dbContext.CartHeaders.FirstAsync(u => u.UserId == cartDto.CartHeaderDto.UserId);
             cartFromDb.CouponCode = "";
             _dbContext.CartHeaders.Update(cartFromDb);
             _dbContext.SaveChangesAsync();
@@ -138,11 +138,11 @@ public class CartController : ControllerBase
     {
         try
         {
-            var cartHeaderFromDb = await _dbContext.CartHeaders.AsNoTracking().FirstOrDefaultAsync(u=>u.UserId == cartDto.CartHeader.UserId);
+            var cartHeaderFromDb = await _dbContext.CartHeaders.AsNoTracking().FirstOrDefaultAsync(u=>u.UserId == cartDto.CartHeaderDto.UserId);
             if (cartHeaderFromDb == null)
             {
                 // create a new cart = new header and details
-                CartHeader cartHeader = _mapper.Map<CartHeader>(cartDto.CartHeader);
+                CartHeader cartHeader = _mapper.Map<CartHeader>(cartDto.CartHeaderDto);
                 _dbContext.CartHeaders.Add(cartHeader);
                 await _dbContext.SaveChangesAsync();
 
