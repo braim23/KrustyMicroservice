@@ -42,10 +42,28 @@ public class ShoppingCartController : Controller
 
         if (response != null && response.IsSuccess)
         {
+            var domain = Request.Scheme + "://" + Request.Host.Value + "/";
             // get stripe session and redirecto to stripe
+            StripeRequestDto stripeRequestDto = new()
+            {
+                ApprovedUrl = domain + "ShoppingCart/Confirmation?orderId=" + orderHeaderDto.OrderHeaderId,
+                CancelUrl = domain + "ShoppingCart/Checkout",
+                OrderHeaderDto = orderHeaderDto
+            };
+
+            var stripeResponse = await _orderService.CreateStripeSession(stripeRequestDto);
+            StripeRequestDto stripeResponseResult = JsonConvert.DeserializeObject<StripeRequestDto>(Convert.ToString(stripeResponse.Result));
+            Response.Headers.Add("Location", stripeResponseResult.StripeSessionUrl);
+            return new StatusCodeResult(303);
+
         }
 
         return View();
+    }
+
+    public async Task<IActionResult> Confirmation(int orderId)
+    {
+        return View(orderId);
     }
 
     //[HttpGet]
