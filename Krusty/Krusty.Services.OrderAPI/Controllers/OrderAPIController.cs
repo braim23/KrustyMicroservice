@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Krusty.Services.OrderAPI.Models;
 using Stripe;
 using Stripe.Checkout;
+using Krusty.MessageBus;
 
 namespace Krusty.Services.OrderAPI.Controllers;
 
@@ -20,17 +21,23 @@ public class OrderAPIController : ControllerBase
     private IMapper _mapper;
     private readonly AppDbContext _dbContext;
     private IProductService _productService;
+    private readonly IMessageBus _messageBus;
+    private readonly IConfiguration _configuration;
 
     public OrderAPIController(
 
         IMapper mapper,
         AppDbContext dbContext,
-        IProductService productService)
+        IProductService productService,
+        IMessageBus messageBus,
+        IConfiguration configuration)
     {
         _response = new ResponseDto();
         _mapper = mapper;
         _dbContext = dbContext;
         _productService = productService;
+        _messageBus = messageBus;
+        _configuration = configuration;
     }
     [Authorize]
     [HttpPost("CreateOrder")]
@@ -116,8 +123,8 @@ public class OrderAPIController : ControllerBase
         return _response;
     }
     [Authorize]
-    [HttpPost("CreateStripeSession")]
-    public async Task<ResponseDto> CreateStripeSession([FromBody] int orderHeaderId)
+    [HttpPost("ValidateStripeSession")]
+    public async Task<ResponseDto> ValidateStripeSession([FromBody] int orderHeaderId)
     {
         try
         {
@@ -136,6 +143,14 @@ public class OrderAPIController : ControllerBase
                 orderHeader.Status = SD.Status_Approved;
                 _dbContext.SaveChanges();
 
+                RewardsDto rewardsDto = new()
+                {
+                    OrderId = orderHeader.OrderHeaderId,
+                    RewardsActivity = Convert.ToInt32(orderHeader.OrderTotal),
+                    UserId = orderHeader.UserId
+                };
+                string topicName = _configuration.GetValue<string>("TopicAndQueueNames:OrderCreatdTopic");
+                await _messageBus.PublishMessage(rewardsDto, topicName);
                 _response.Result = _mapper.Map<OrderHeaderDto>(orderHeader);
             }
             

@@ -1,5 +1,6 @@
 ﻿using Krusty.Web.Models;
 using Krusty.Web.Service.IService;
+using Krusty.Web.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -63,16 +64,23 @@ public class ShoppingCartController : Controller
 
     public async Task<IActionResult> Confirmation(int orderId)
     {
+        ResponseDto? response = await _orderService.ValidateStripeSession(orderId);
+        if (response != null && response.IsSuccess)
+        {
+            OrderHeaderDto orderHeaderDto = JsonConvert.DeserializeObject<OrderHeaderDto>(Convert.ToString(response.Result));
+            if(orderHeaderDto.Status == SD.Status_Approved)
+            {
+                return View(orderId);
+            }
+            TempData["success"] = "Cart updated successfully!";
+            return RedirectToAction(nameof(CartIndex));
+        }
+
+        // Redirect to some error page based on the status
         return View(orderId);
     }
 
-    //[HttpGet]
-    //[ActionName("Meow")]
-    //public IActionResult Meow()
-    //{
-    //    _orderService.Meow();
-    //    return View();
-    //}
+    
 
     [HttpPost]
     public async Task<IActionResult> ApplyCoupon(CartDto cartDto)
