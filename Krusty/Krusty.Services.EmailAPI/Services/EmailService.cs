@@ -1,4 +1,5 @@
 ﻿using Krusty.Services.EmailAPI.Data;
+using Krusty.Services.EmailAPI.Message;
 using Krusty.Services.EmailAPI.Models;
 using Krusty.Services.EmailAPI.Models.Dto;
 using Microsoft.EntityFrameworkCore;
@@ -33,6 +34,12 @@ public class EmailService : IEmailService
         message.Append("</ul>");
 
         await LogAndEmail(message.ToString(), cartDto.CartHeaderDto.Email);
+    }
+
+    public async Task LogOrderPlaced(RewardsMessage rewardsDto)
+    {
+        string message = "New Order Placed. <br/> Order ID:" + rewardsDto.OrderId;
+        await LogAndEmail(message, "admin@mail.com");
     }
 
     public async Task RegisterUserEmailAndLog(string email)

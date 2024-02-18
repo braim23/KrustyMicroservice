@@ -1,4 +1,5 @@
-﻿using Krusty.Services.EmailAPI.Messaging;
+﻿
+using Krusty.Services.RewardAPI.Messaging;
 
 namespace Krusty.Services.RewardAPI.Extension;
 
