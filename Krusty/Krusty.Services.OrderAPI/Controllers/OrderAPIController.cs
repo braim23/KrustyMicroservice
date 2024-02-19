@@ -10,6 +10,7 @@ using Krusty.Services.OrderAPI.Models;
 using Stripe;
 using Stripe.Checkout;
 using Krusty.MessageBus;
+using Microsoft.EntityFrameworkCore;
 
 namespace Krusty.Services.OrderAPI.Controllers;
 
@@ -39,6 +40,50 @@ public class OrderAPIController : ControllerBase
         _messageBus = messageBus;
         _configuration = configuration;
     }
+
+    [Authorize]
+    [HttpGet("GetOrders")]
+    public ResponseDto? Get(string? userId = "")
+    {
+        try
+        {
+            IEnumerable<OrderHeader> objList;
+            if (User.IsInRole(SD.RoleAdmin))
+            {
+                objList = _dbContext.OrderHeaders.Include(u => u.OrderDetailsDto).OrderByDescending(u => u.OrderHeaderId).ToList();
+            }
+            else
+            {
+                objList = _dbContext.OrderHeaders.Include(u => u.OrderDetailsDto).Where(u => u.UserId == userId).OrderByDescending(u => u.OrderHeaderId).ToList();
+            }
+
+            _response.Result = _mapper.Map<IEnumerable<OrderHeader>>(objList);
+        }
+        catch (Exception ex)
+        {
+            _response.IsSuccess = false;
+            _response.Message = ex.Message;
+        }
+        return _response;
+    }
+
+    [Authorize]
+    [HttpGet("GetOrder/{id:int}")]
+    public ResponseDto? Get(int id)
+    {
+        try
+        {
+            OrderHeader orderHeader = _dbContext.OrderHeaders.Include(u => u.OrderDetailsDto).First(u => u.OrderHeaderId == id);
+            _response.Result = _mapper.Map<OrderHeader>(orderHeader);
+        }
+        catch (Exception ex)
+        {
+            _response.IsSuccess = false;
+            _response.Message = ex.Message;
+        }
+        return _response;
+    }
+
     [Authorize]
     [HttpPost("CreateOrder")]
     public async Task<ResponseDto> CreateOrder([FromBody] CartDto cartDto)
@@ -129,14 +174,14 @@ public class OrderAPIController : ControllerBase
         try
         {
             OrderHeader orderHeader = _dbContext.OrderHeaders.First(u => u.OrderHeaderId == orderHeaderId);
-            
+
             var service = new SessionService();
             Session session = service.Get(orderHeader.StripeSessionId);
 
-            var paymentIntentService= new PaymentIntentService();
+            var paymentIntentService = new PaymentIntentService();
             PaymentIntent paymentIntent = paymentIntentService.Get(session.PaymentIntentId);
 
-            if(paymentIntent.Status == "succeeded")
+            if (paymentIntent.Status == "succeeded")
             {
                 // payment is successful so..
                 orderHeader.PaymentIntentId = paymentIntent.Id;
@@ -153,12 +198,47 @@ public class OrderAPIController : ControllerBase
                 await _messageBus.PublishMessage(rewardsDto, topicName);
                 _response.Result = _mapper.Map<OrderHeaderDto>(orderHeader);
             }
-            
+
         }
         catch (Exception ex)
         {
             _response.Message = ex.Message;
             _response.IsSuccess = false;
+        }
+        return _response;
+    }
+
+    [Authorize]
+    [HttpPost("UpdateOrderStatus/{orderId: int}")]
+    public async Task<ResponseDto> UpdateOrderStatus(int orderId, [FromBody] string newStatus)
+    {
+        try
+        {
+            OrderHeader orderHeader = _dbContext.OrderHeaders.First(u => u.OrderHeaderId == orderId);
+            if(orderHeader != null)
+            {
+                if(newStatus== SD.Status_Cancelled)
+                {
+                    // refund
+                    var options = new RefundCreateOptions
+                    {
+                        Reason = RefundReasons.RequestedByCustomer,
+                        PaymentIntent = orderHeader.PaymentIntentId
+                    };
+
+                    var service = new RefundService();
+                    Refund refund = service.Create(options);
+                }
+                orderHeader.Status = newStatus;
+                _dbContext.SaveChanges();
+            }
+
+
+        }
+        catch (Exception ex)
+        {
+            _response.IsSuccess=false;
+            _response.Message = ex.Message;
         }
         return _response;
     }
