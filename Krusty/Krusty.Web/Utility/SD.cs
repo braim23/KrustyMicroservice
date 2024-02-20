@@ -8,8 +8,8 @@ public class SD
     public static string ShoppingCartAPIBase { get; set; }
     public static string OrderAPIBase { get; set; }
 
-    public const string RoleAdmin = "Admin";
-    public const string RoleCustomer = "Customer";
+    public const string RoleAdmin = "ADMIN";
+    public const string RoleCustomer = "CUSTOMER";
     public const string TokenCookie = "JWTToken";
     public enum ApiType
     { 

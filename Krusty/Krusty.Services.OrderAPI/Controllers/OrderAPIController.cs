@@ -43,7 +43,7 @@ public class OrderAPIController : ControllerBase
 
     [Authorize]
     [HttpGet("GetOrders")]
-    public ResponseDto? Get(string? userId = "")
+    public ResponseDto? GetOrders(string? userId = "")
     {
         try
         {
@@ -57,7 +57,7 @@ public class OrderAPIController : ControllerBase
                 objList = _dbContext.OrderHeaders.Include(u => u.OrderDetailsDto).Where(u => u.UserId == userId).OrderByDescending(u => u.OrderHeaderId).ToList();
             }
 
-            _response.Result = _mapper.Map<IEnumerable<OrderHeader>>(objList);
+            _response.Result = _mapper.Map<IEnumerable<OrderHeaderDto>>(objList);
         }
         catch (Exception ex)
         {
@@ -74,7 +74,7 @@ public class OrderAPIController : ControllerBase
         try
         {
             OrderHeader orderHeader = _dbContext.OrderHeaders.Include(u => u.OrderDetailsDto).First(u => u.OrderHeaderId == id);
-            _response.Result = _mapper.Map<OrderHeader>(orderHeader);
+            _response.Result = _mapper.Map<OrderHeaderDto>(orderHeader);
         }
         catch (Exception ex)
         {
@@ -209,7 +209,7 @@ public class OrderAPIController : ControllerBase
     }
 
     [Authorize]
-    [HttpPost("UpdateOrderStatus/{orderId: int}")]
+    [HttpPost("UpdateOrderStatus/{orderId:int}")]
     public async Task<ResponseDto> UpdateOrderStatus(int orderId, [FromBody] string newStatus)
     {
         try
