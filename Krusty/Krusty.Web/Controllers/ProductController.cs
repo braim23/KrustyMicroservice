@@ -39,10 +39,10 @@ namespace Krusty.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> ProductCreate(ProductDto productDto)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 ResponseDto response = await _productService.CreateProductAsync(productDto);
-                if(response != null && response.IsSuccess) 
+                if (response != null && response.IsSuccess)
                 {
                     TempData["success"] = "Product created successfully!";
                     return RedirectToAction(nameof(ProductIndex));
@@ -57,14 +57,14 @@ namespace Krusty.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> ProductDelete(int productId)
         {
-			ResponseDto respone = await _productService.GetProductByIdAsync(productId);
-			if (respone != null && respone.IsSuccess)
-			{
-				ProductDto? productDto = JsonConvert.DeserializeObject<ProductDto>
-					(Convert.ToString(respone.Result));
+            ResponseDto respone = await _productService.GetProductByIdAsync(productId);
+            if (respone != null && respone.IsSuccess)
+            {
+                ProductDto? productDto = JsonConvert.DeserializeObject<ProductDto>
+                    (Convert.ToString(respone.Result));
                 return View(productDto);
-			}
-			return NotFound();
+            }
+            return NotFound();
         }
         [HttpPost]
         public async Task<IActionResult> ProductDelete(ProductDto productDto)
@@ -82,34 +82,38 @@ namespace Krusty.Web.Controllers
             return View(productDto);
         }
 
-		// edit
+        // edit
 
-		[HttpGet]
-		public async Task<IActionResult> ProductEdit(int productId)
-		{
-			ResponseDto respone = await _productService.GetProductByIdAsync(productId);
-			if (respone != null && respone.IsSuccess)
-			{
-				ProductDto? productDto = JsonConvert.DeserializeObject<ProductDto>
-					(Convert.ToString(respone.Result));
-				return View(productDto);
-			}
-			return NotFound();
-		}
-		[HttpPost]
-		public async Task<IActionResult> ProductEdit(ProductDto productDto)
-		{
-			ResponseDto response = await _productService.UpdateProductAsync(productDto);
-			if (response != null && response.IsSuccess)
-			{
-				TempData["success"] = "Product updated successfully!";
-				return RedirectToAction(nameof(ProductIndex));
-			}
-			else
-			{
-				TempData["error"] = response?.Message;
-			}
-			return View(productDto);
-		}
-	}
+        [HttpGet]
+        public async Task<IActionResult> ProductEdit(int productId)
+        {
+            ResponseDto respone = await _productService.GetProductByIdAsync(productId);
+            if (respone != null && respone.IsSuccess)
+            {
+                ProductDto? productDto = JsonConvert.DeserializeObject<ProductDto>
+                    (Convert.ToString(respone.Result));
+                return View(productDto);
+            }
+            return NotFound();
+        }
+        [HttpPost]
+        public async Task<IActionResult> ProductEdit(ProductDto productDto)
+        {
+            if (ModelState.IsValid)
+            {
+
+                ResponseDto response = await _productService.UpdateProductAsync(productDto);
+                if (response != null && response.IsSuccess)
+                {
+                    TempData["success"] = "Product updated successfully!";
+                    return RedirectToAction(nameof(ProductIndex));
+                }
+                else
+                {
+                    TempData["error"] = response?.Message;
+                }
+            }
+            return View(productDto);
+        }
+    }
 }
