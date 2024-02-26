@@ -18,7 +18,7 @@ public class ProductService : IProductService
         {
             ApiType = SD.ApiType.POST,
             Data = ProductDto,
-            Url = SD.ProductAPIBase + "/api/product/" ,
+            Url = SD.ProductAPIBase + "/api/product" ,
             ContentType = SD.ContentType.MultipartFormData
         });
     }
@@ -41,14 +41,14 @@ public class ProductService : IProductService
         });
     }
 
-    public async Task<ResponseDto?> GetProductAsync(string ProductCode)
-    {
-        return await _baseService.SendAsync(new RequestDto()
-        {
-            ApiType = SD.ApiType.GET,
-            Url = SD.ProductAPIBase + "/api/product/GetByCode" + ProductCode
-        });
-    }
+    //public async Task<ResponseDto?> GetProductAsync(string ProductCode)
+    //{
+    //    return await _baseService.SendAsync(new RequestDto()
+    //    {
+    //        ApiType = SD.ApiType.GET,
+    //        Url = SD.ProductAPIBase + "/api/product/GetByCode" + ProductCode
+    //    });
+    //}
 
     public async Task<ResponseDto?> GetProductByIdAsync(int id)
     {
@@ -65,7 +65,7 @@ public class ProductService : IProductService
         {
             ApiType = SD.ApiType.PUT,
             Data = ProductDto,
-            Url = SD.ProductAPIBase + "/api/product/" ,
+            Url = SD.ProductAPIBase + "/api/product" ,
             ContentType = SD.ContentType.MultipartFormData
         });
     }

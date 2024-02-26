@@ -1,0 +1,599 @@
+2024-02-25 08:41:39.286 +03:00 [INF] User profile is available. Using 'C:\Users\BetterCallHamza\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-25 08:41:39.645 +03:00 [INF] Now listening on: https://localhost:7109
+2024-02-25 08:41:39.646 +03:00 [INF] Now listening on: http://localhost:5180
+2024-02-25 08:41:39.648 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-25 08:41:39.649 +03:00 [INF] Hosting environment: Development
+2024-02-25 08:41:39.649 +03:00 [INF] Content root path: C:\Users\BetterCallHamza\Documents\GitHub\KrustyMicroservice\Krusty\Krusty.Web
+2024-02-25 08:42:05.363 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/ - null null
+2024-02-25 08:42:05.605 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.HomeController.Index (Krusty.Web)'
+2024-02-25 08:42:05.657 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Krusty.Web.Controllers.HomeController (Krusty.Web).
+2024-02-25 08:42:05.692 +03:00 [INF] Start processing HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:42:05.694 +03:00 [INF] Sending HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:42:06.175 +03:00 [INF] Received HTTP response headers after 477.5753ms - 200
+2024-02-25 08:42:06.218 +03:00 [INF] End processing HTTP request after 528.5625ms - 200
+2024-02-25 08:42:06.459 +03:00 [INF] Executing ViewResult, running view Index.
+2024-02-25 08:42:06.657 +03:00 [INF] Executed ViewResult - view Index executed in 200.9804ms.
+2024-02-25 08:42:06.675 +03:00 [INF] Executed action Krusty.Web.Controllers.HomeController.Index (Krusty.Web) in 1012.1995ms
+2024-02-25 08:42:06.678 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.HomeController.Index (Krusty.Web)'
+2024-02-25 08:42:06.683 +03:00 [INF] HTTP GET / responded 200 in 1106.0389 ms
+2024-02-25 08:42:06.694 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/ - 200 null text/html; charset=utf-8 1334.9508ms
+2024-02-25 08:42:06.802 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0 - null null
+2024-02-25 08:42:06.813 +03:00 [INF] The file /css/site.css was not modified
+2024-02-25 08:42:06.817 +03:00 [INF] HTTP GET /css/site.css responded 304 in 7.6052 ms
+2024-02-25 08:42:06.821 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0 - 304 null text/css 21.5874ms
+2024-02-25 08:42:07.075 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Krusty.Web.styles.css?v=AkKXEZpGp1lD1K3V97J7aW6litzoyFutrs-XA1nBeoI - null null
+2024-02-25 08:42:07.095 +03:00 [INF] The file /Krusty.Web.styles.css was not modified
+2024-02-25 08:42:07.105 +03:00 [INF] HTTP GET /Krusty.Web.styles.css responded 304 in 10.8172 ms
+2024-02-25 08:42:07.108 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Krusty.Web.styles.css?v=AkKXEZpGp1lD1K3V97J7aW6litzoyFutrs-XA1nBeoI - 304 null text/css 33.1401ms
+2024-02-25 08:42:07.163 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/33222 - null null
+2024-02-25 08:42:07.171 +03:00 [INF] HTTP GET /33222 responded 404 in 4.4908 ms
+2024-02-25 08:42:07.174 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/33222 - 404 0 null 11.088ms
+2024-02-25 08:42:07.178 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7109/33222, Response status code: 404
+2024-02-25 08:42:07.182 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:42:07.189 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 7.8324ms
+2024-02-25 08:42:07.200 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:42:07.237 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.3549ms
+2024-02-25 08:42:47.937 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/ShoppingCart/CartIndex - null null
+2024-02-25 08:42:47.950 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-02-25 08:42:47.953 +03:00 [INF] AuthenticationScheme: Cookies was challenged.
+2024-02-25 08:42:47.954 +03:00 [INF] HTTP GET /ShoppingCart/CartIndex responded 302 in 8.2769 ms
+2024-02-25 08:42:47.955 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/ShoppingCart/CartIndex - 302 0 null 18.5863ms
+2024-02-25 08:42:47.959 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Auth/Login?ReturnUrl=%2FShoppingCart%2FCartIndex - null null
+2024-02-25 08:42:47.963 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.AuthController.Login (Krusty.Web)'
+2024-02-25 08:42:47.965 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Krusty.Web.Controllers.AuthController (Krusty.Web).
+2024-02-25 08:42:47.968 +03:00 [INF] Executing ViewResult, running view Login.
+2024-02-25 08:42:47.993 +03:00 [INF] Executed ViewResult - view Login executed in 26.2714ms.
+2024-02-25 08:42:47.997 +03:00 [INF] Executed action Krusty.Web.Controllers.AuthController.Login (Krusty.Web) in 31.0162ms
+2024-02-25 08:42:47.999 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.AuthController.Login (Krusty.Web)'
+2024-02-25 08:42:48.000 +03:00 [INF] HTTP GET /Auth/Login responded 200 in 37.1754 ms
+2024-02-25 08:42:48.002 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Auth/Login?ReturnUrl=%2FShoppingCart%2FCartIndex - 200 null text/html; charset=utf-8 43.4346ms
+2024-02-25 08:42:48.099 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:42:48.100 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2024-02-25 08:42:48.104 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:42:48.099 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2024-02-25 08:42:48.111 +03:00 [INF] The file /lib/jquery-validation/dist/jquery.validate.min.js was not modified
+2024-02-25 08:42:48.116 +03:00 [INF] The file /lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js was not modified
+2024-02-25 08:42:48.117 +03:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js responded 304 in 6.4179 ms
+2024-02-25 08:42:48.118 +03:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js responded 304 in 2.0124 ms
+2024-02-25 08:42:48.120 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/lib/jquery-validation/dist/jquery.validate.min.js - 304 null text/javascript 20.4828ms
+2024-02-25 08:42:48.122 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 304 null text/javascript 22.4055ms
+2024-02-25 08:42:48.106 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 7.3699ms
+2024-02-25 08:42:48.136 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.7621ms
+2024-02-25 08:42:48.702 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Order/OrderIndex - null null
+2024-02-25 08:42:48.707 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-02-25 08:42:48.708 +03:00 [INF] AuthenticationScheme: Cookies was challenged.
+2024-02-25 08:42:48.708 +03:00 [INF] HTTP GET /Order/OrderIndex responded 302 in 3.1651 ms
+2024-02-25 08:42:48.710 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Order/OrderIndex - 302 0 null 8.1997ms
+2024-02-25 08:42:48.714 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Auth/Login?ReturnUrl=%2FOrder%2FOrderIndex - null null
+2024-02-25 08:42:48.717 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.AuthController.Login (Krusty.Web)'
+2024-02-25 08:42:48.718 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Krusty.Web.Controllers.AuthController (Krusty.Web).
+2024-02-25 08:42:48.720 +03:00 [INF] Executing ViewResult, running view Login.
+2024-02-25 08:42:48.723 +03:00 [INF] Executed ViewResult - view Login executed in 3.8922ms.
+2024-02-25 08:42:48.725 +03:00 [INF] Executed action Krusty.Web.Controllers.AuthController.Login (Krusty.Web) in 5.793ms
+2024-02-25 08:42:48.726 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.AuthController.Login (Krusty.Web)'
+2024-02-25 08:42:48.727 +03:00 [INF] HTTP GET /Auth/Login responded 200 in 10.4795 ms
+2024-02-25 08:42:48.729 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Auth/Login?ReturnUrl=%2FOrder%2FOrderIndex - 200 null text/html; charset=utf-8 15.1085ms
+2024-02-25 08:42:48.815 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:42:48.815 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:42:48.818 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.2747ms
+2024-02-25 08:42:48.828 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.9772ms
+2024-02-25 08:42:49.324 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Home/Privacy - null null
+2024-02-25 08:42:49.328 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.HomeController.Privacy (Krusty.Web)'
+2024-02-25 08:42:49.330 +03:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Privacy() on controller Krusty.Web.Controllers.HomeController (Krusty.Web).
+2024-02-25 08:42:49.332 +03:00 [INF] Executing ViewResult, running view Privacy.
+2024-02-25 08:42:49.335 +03:00 [INF] Executed ViewResult - view Privacy executed in 3.744ms.
+2024-02-25 08:42:49.337 +03:00 [INF] Executed action Krusty.Web.Controllers.HomeController.Privacy (Krusty.Web) in 5.8014ms
+2024-02-25 08:42:49.338 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.HomeController.Privacy (Krusty.Web)'
+2024-02-25 08:42:49.339 +03:00 [INF] HTTP GET /Home/Privacy responded 200 in 10.9519 ms
+2024-02-25 08:42:49.340 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Home/Privacy - 200 null text/html; charset=utf-8 16.3453ms
+2024-02-25 08:42:49.418 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:42:49.418 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:42:49.421 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.148ms
+2024-02-25 08:42:49.433 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.3998ms
+2024-02-25 08:42:49.726 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/ - null null
+2024-02-25 08:42:49.730 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.HomeController.Index (Krusty.Web)'
+2024-02-25 08:42:49.730 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Krusty.Web.Controllers.HomeController (Krusty.Web).
+2024-02-25 08:42:49.733 +03:00 [INF] Start processing HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:42:49.734 +03:00 [INF] Sending HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:42:49.771 +03:00 [INF] Received HTTP response headers after 36.173ms - 200
+2024-02-25 08:42:49.772 +03:00 [INF] End processing HTTP request after 38.9703ms - 200
+2024-02-25 08:42:49.773 +03:00 [INF] Executing ViewResult, running view Index.
+2024-02-25 08:42:49.776 +03:00 [INF] Executed ViewResult - view Index executed in 2.8565ms.
+2024-02-25 08:42:49.777 +03:00 [INF] Executed action Krusty.Web.Controllers.HomeController.Index (Krusty.Web) in 45.6813ms
+2024-02-25 08:42:49.778 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.HomeController.Index (Krusty.Web)'
+2024-02-25 08:42:49.779 +03:00 [INF] HTTP GET / responded 200 in 49.5748 ms
+2024-02-25 08:42:49.781 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/ - 200 null text/html; charset=utf-8 54.7387ms
+2024-02-25 08:42:49.877 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:42:49.878 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/33222 - null null
+2024-02-25 08:42:49.879 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:42:49.880 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.8091ms
+2024-02-25 08:42:49.882 +03:00 [INF] HTTP GET /33222 responded 404 in 0.1508 ms
+2024-02-25 08:42:49.894 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/33222 - 404 0 null 15.5805ms
+2024-02-25 08:42:49.895 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.3813ms
+2024-02-25 08:42:49.897 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7109/33222, Response status code: 404
+2024-02-25 08:42:50.179 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/ - null null
+2024-02-25 08:42:50.183 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.HomeController.Index (Krusty.Web)'
+2024-02-25 08:42:50.184 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Krusty.Web.Controllers.HomeController (Krusty.Web).
+2024-02-25 08:42:50.185 +03:00 [INF] Start processing HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:42:50.186 +03:00 [INF] Sending HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:42:50.192 +03:00 [INF] Received HTTP response headers after 5.023ms - 200
+2024-02-25 08:42:50.193 +03:00 [INF] End processing HTTP request after 7.7847ms - 200
+2024-02-25 08:42:50.195 +03:00 [INF] Executing ViewResult, running view Index.
+2024-02-25 08:42:50.198 +03:00 [INF] Executed ViewResult - view Index executed in 2.975ms.
+2024-02-25 08:42:50.199 +03:00 [INF] Executed action Krusty.Web.Controllers.HomeController.Index (Krusty.Web) in 13.8627ms
+2024-02-25 08:42:50.200 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.HomeController.Index (Krusty.Web)'
+2024-02-25 08:42:50.202 +03:00 [INF] HTTP GET / responded 200 in 19.2783 ms
+2024-02-25 08:42:50.204 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/ - 200 null text/html; charset=utf-8 25.0283ms
+2024-02-25 08:42:50.295 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:42:50.295 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:42:50.295 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/33222 - null null
+2024-02-25 08:42:50.299 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.9741ms
+2024-02-25 08:42:50.305 +03:00 [INF] HTTP GET /33222 responded 404 in 0.4510 ms
+2024-02-25 08:42:50.309 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.8837ms
+2024-02-25 08:42:50.312 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/33222 - 404 0 null 16.5125ms
+2024-02-25 08:42:50.317 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7109/33222, Response status code: 404
+2024-02-25 08:42:56.319 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Auth/Login - null null
+2024-02-25 08:42:56.323 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.AuthController.Login (Krusty.Web)'
+2024-02-25 08:42:56.324 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Krusty.Web.Controllers.AuthController (Krusty.Web).
+2024-02-25 08:42:56.325 +03:00 [INF] Executing ViewResult, running view Login.
+2024-02-25 08:42:56.329 +03:00 [INF] Executed ViewResult - view Login executed in 3.202ms.
+2024-02-25 08:42:56.331 +03:00 [INF] Executed action Krusty.Web.Controllers.AuthController.Login (Krusty.Web) in 5.9971ms
+2024-02-25 08:42:56.332 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.AuthController.Login (Krusty.Web)'
+2024-02-25 08:42:56.333 +03:00 [INF] HTTP GET /Auth/Login responded 200 in 10.2658 ms
+2024-02-25 08:42:56.334 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Auth/Login - 200 null text/html; charset=utf-8 15.277ms
+2024-02-25 08:42:56.416 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:42:56.416 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:42:56.419 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.7865ms
+2024-02-25 08:42:56.429 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.678ms
+2024-02-25 08:43:03.734 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7109/Auth/Login - application/x-www-form-urlencoded 225
+2024-02-25 08:43:03.738 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.AuthController.Login (Krusty.Web)'
+2024-02-25 08:43:03.744 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Krusty.Web.Models.LoginRequestDTO) on controller Krusty.Web.Controllers.AuthController (Krusty.Web).
+2024-02-25 08:43:03.762 +03:00 [INF] Start processing HTTP request POST https://localhost:7002/api/auth/login
+2024-02-25 08:43:03.762 +03:00 [INF] Sending HTTP request POST https://localhost:7002/api/auth/login
+2024-02-25 08:43:04.227 +03:00 [INF] Received HTTP response headers after 464.1351ms - 200
+2024-02-25 08:43:04.228 +03:00 [INF] End processing HTTP request after 466.7297ms - 200
+2024-02-25 08:43:04.285 +03:00 [INF] AuthenticationScheme: Cookies signed in.
+2024-02-25 08:43:04.286 +03:00 [INF] Executing RedirectResult, redirecting to /.
+2024-02-25 08:43:04.287 +03:00 [INF] Executed action Krusty.Web.Controllers.AuthController.Login (Krusty.Web) in 541.0539ms
+2024-02-25 08:43:04.287 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.AuthController.Login (Krusty.Web)'
+2024-02-25 08:43:04.288 +03:00 [INF] HTTP POST /Auth/Login responded 302 in 550.7177 ms
+2024-02-25 08:43:04.289 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7109/Auth/Login - 302 0 null 555.8896ms
+2024-02-25 08:43:04.294 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/ - null null
+2024-02-25 08:43:04.298 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.HomeController.Index (Krusty.Web)'
+2024-02-25 08:43:04.299 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Krusty.Web.Controllers.HomeController (Krusty.Web).
+2024-02-25 08:43:04.300 +03:00 [INF] Start processing HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:43:04.301 +03:00 [INF] Sending HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:43:04.339 +03:00 [INF] Received HTTP response headers after 36.8215ms - 200
+2024-02-25 08:43:04.340 +03:00 [INF] End processing HTTP request after 39.2984ms - 200
+2024-02-25 08:43:04.341 +03:00 [INF] Executing ViewResult, running view Index.
+2024-02-25 08:43:04.344 +03:00 [INF] Executed ViewResult - view Index executed in 3.1478ms.
+2024-02-25 08:43:04.345 +03:00 [INF] Executed action Krusty.Web.Controllers.HomeController.Index (Krusty.Web) in 45.0644ms
+2024-02-25 08:43:04.346 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.HomeController.Index (Krusty.Web)'
+2024-02-25 08:43:04.347 +03:00 [INF] HTTP GET / responded 200 in 49.9941 ms
+2024-02-25 08:43:04.349 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/ - 200 null text/html; charset=utf-8 54.6044ms
+2024-02-25 08:43:04.440 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/33222 - null null
+2024-02-25 08:43:04.441 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:43:04.442 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:43:04.444 +03:00 [INF] HTTP GET /33222 responded 404 in 0.5498 ms
+2024-02-25 08:43:04.446 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 5.4571ms
+2024-02-25 08:43:04.454 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/33222 - 404 0 null 13.4725ms
+2024-02-25 08:43:04.460 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.4707ms
+2024-02-25 08:43:04.463 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7109/33222, Response status code: 404
+2024-02-25 08:43:05.324 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Home/Privacy - null null
+2024-02-25 08:43:05.328 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.HomeController.Privacy (Krusty.Web)'
+2024-02-25 08:43:05.329 +03:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Privacy() on controller Krusty.Web.Controllers.HomeController (Krusty.Web).
+2024-02-25 08:43:05.330 +03:00 [INF] Executing ViewResult, running view Privacy.
+2024-02-25 08:43:05.332 +03:00 [INF] Executed ViewResult - view Privacy executed in 2.3196ms.
+2024-02-25 08:43:05.334 +03:00 [INF] Executed action Krusty.Web.Controllers.HomeController.Privacy (Krusty.Web) in 3.9277ms
+2024-02-25 08:43:05.335 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.HomeController.Privacy (Krusty.Web)'
+2024-02-25 08:43:05.336 +03:00 [INF] HTTP GET /Home/Privacy responded 200 in 8.9655 ms
+2024-02-25 08:43:05.338 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Home/Privacy - 200 null text/html; charset=utf-8 14.2259ms
+2024-02-25 08:43:05.418 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:43:05.419 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:43:05.421 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.5232ms
+2024-02-25 08:43:05.431 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.4227ms
+2024-02-25 08:43:06.535 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Product/ProductIndex - null null
+2024-02-25 08:43:06.539 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web)'
+2024-02-25 08:43:06.541 +03:00 [INF] Route matched with {action = "ProductIndex", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductIndex() on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:43:06.543 +03:00 [INF] Start processing HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:43:06.544 +03:00 [INF] Sending HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:43:06.549 +03:00 [INF] Received HTTP response headers after 4.2043ms - 200
+2024-02-25 08:43:06.550 +03:00 [INF] End processing HTTP request after 6.9886ms - 200
+2024-02-25 08:43:06.552 +03:00 [INF] Executing ViewResult, running view ProductIndex.
+2024-02-25 08:43:06.557 +03:00 [INF] Executed ViewResult - view ProductIndex executed in 5.9994ms.
+2024-02-25 08:43:06.558 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web) in 16.1811ms
+2024-02-25 08:43:06.559 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web)'
+2024-02-25 08:43:06.560 +03:00 [INF] HTTP GET /Product/ProductIndex responded 200 in 22.0174 ms
+2024-02-25 08:43:06.562 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Product/ProductIndex - 200 null text/html; charset=utf-8 27.07ms
+2024-02-25 08:43:06.646 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:43:06.647 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:43:06.650 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.8456ms
+2024-02-25 08:43:06.659 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.8915ms
+2024-02-25 08:43:09.665 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Product/ProductDelete?productId=6 - null null
+2024-02-25 08:43:09.669 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:43:09.672 +03:00 [INF] Route matched with {action = "ProductDelete", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductDelete(Int32) on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:43:09.677 +03:00 [INF] Start processing HTTP request GET https://localhost:7000/api/product/6
+2024-02-25 08:43:09.677 +03:00 [INF] Sending HTTP request GET https://localhost:7000/api/product/6
+2024-02-25 08:43:09.749 +03:00 [INF] Received HTTP response headers after 71.013ms - 200
+2024-02-25 08:43:09.750 +03:00 [INF] End processing HTTP request after 73.5317ms - 200
+2024-02-25 08:43:09.752 +03:00 [INF] Executing ViewResult, running view ProductDelete.
+2024-02-25 08:43:09.766 +03:00 [INF] Executed ViewResult - view ProductDelete executed in 14.9926ms.
+2024-02-25 08:43:09.768 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web) in 94.7729ms
+2024-02-25 08:43:09.769 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:43:09.770 +03:00 [INF] HTTP GET /Product/ProductDelete responded 200 in 101.2221 ms
+2024-02-25 08:43:09.771 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Product/ProductDelete?productId=6 - 200 null text/html; charset=utf-8 106.1458ms
+2024-02-25 08:43:09.851 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:43:09.851 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:43:09.854 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.476ms
+2024-02-25 08:43:09.866 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.2389ms
+2024-02-25 08:43:10.675 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7109/Product/ProductDelete - application/x-www-form-urlencoded 259
+2024-02-25 08:43:10.679 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:43:10.682 +03:00 [INF] Route matched with {action = "ProductDelete", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductDelete(Krusty.Web.Models.ProductDto) on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:43:10.687 +03:00 [INF] Start processing HTTP request DELETE https://localhost:7000/api/product/6
+2024-02-25 08:43:10.688 +03:00 [INF] Sending HTTP request DELETE https://localhost:7000/api/product/6
+2024-02-25 08:43:10.748 +03:00 [INF] Received HTTP response headers after 58.7525ms - 200
+2024-02-25 08:43:10.749 +03:00 [INF] End processing HTTP request after 61.4554ms - 200
+2024-02-25 08:43:10.750 +03:00 [INF] Executing RedirectResult, redirecting to /Product/ProductIndex.
+2024-02-25 08:43:10.751 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web) in 67.3715ms
+2024-02-25 08:43:10.752 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:43:10.753 +03:00 [INF] HTTP POST /Product/ProductDelete responded 302 in 74.2343 ms
+2024-02-25 08:43:10.754 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7109/Product/ProductDelete - 302 0 null 79.2183ms
+2024-02-25 08:43:10.759 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Product/ProductIndex - null null
+2024-02-25 08:43:10.762 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web)'
+2024-02-25 08:43:10.763 +03:00 [INF] Route matched with {action = "ProductIndex", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductIndex() on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:43:10.764 +03:00 [INF] Start processing HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:43:10.765 +03:00 [INF] Sending HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:43:10.770 +03:00 [INF] Received HTTP response headers after 3.8478ms - 200
+2024-02-25 08:43:10.771 +03:00 [INF] End processing HTTP request after 6.4011ms - 200
+2024-02-25 08:43:10.772 +03:00 [INF] Executing ViewResult, running view ProductIndex.
+2024-02-25 08:43:10.775 +03:00 [INF] Executed ViewResult - view ProductIndex executed in 3.1283ms.
+2024-02-25 08:43:10.776 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web) in 11.9888ms
+2024-02-25 08:43:10.777 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web)'
+2024-02-25 08:43:10.778 +03:00 [INF] HTTP GET /Product/ProductIndex responded 200 in 16.0978 ms
+2024-02-25 08:43:10.781 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Product/ProductIndex - 200 null text/html; charset=utf-8 21.9005ms
+2024-02-25 08:43:10.864 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:43:10.864 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:43:10.867 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.3286ms
+2024-02-25 08:43:10.877 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.2292ms
+2024-02-25 08:43:11.946 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Product/ProductDelete?productId=1004 - null null
+2024-02-25 08:43:11.949 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:43:11.950 +03:00 [INF] Route matched with {action = "ProductDelete", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductDelete(Int32) on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:43:11.951 +03:00 [INF] Start processing HTTP request GET https://localhost:7000/api/product/1004
+2024-02-25 08:43:11.952 +03:00 [INF] Sending HTTP request GET https://localhost:7000/api/product/1004
+2024-02-25 08:43:11.957 +03:00 [INF] Received HTTP response headers after 4.2266ms - 200
+2024-02-25 08:43:11.958 +03:00 [INF] End processing HTTP request after 6.7043ms - 200
+2024-02-25 08:43:11.959 +03:00 [INF] Executing ViewResult, running view ProductDelete.
+2024-02-25 08:43:11.963 +03:00 [INF] Executed ViewResult - view ProductDelete executed in 3.3147ms.
+2024-02-25 08:43:11.964 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web) in 12.5816ms
+2024-02-25 08:43:11.965 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:43:11.965 +03:00 [INF] HTTP GET /Product/ProductDelete responded 200 in 16.6716 ms
+2024-02-25 08:43:11.967 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Product/ProductDelete?productId=1004 - 200 null text/html; charset=utf-8 21.6273ms
+2024-02-25 08:43:12.045 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:43:12.046 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:43:12.048 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.4364ms
+2024-02-25 08:43:12.061 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.0332ms
+2024-02-25 08:43:13.852 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7109/Product/ProductDelete - application/x-www-form-urlencoded 262
+2024-02-25 08:43:13.855 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:43:13.856 +03:00 [INF] Route matched with {action = "ProductDelete", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductDelete(Krusty.Web.Models.ProductDto) on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:43:13.858 +03:00 [INF] Start processing HTTP request DELETE https://localhost:7000/api/product/1004
+2024-02-25 08:43:13.858 +03:00 [INF] Sending HTTP request DELETE https://localhost:7000/api/product/1004
+2024-02-25 08:43:13.871 +03:00 [INF] Received HTTP response headers after 11.6945ms - 200
+2024-02-25 08:43:13.872 +03:00 [INF] End processing HTTP request after 14.2091ms - 200
+2024-02-25 08:43:13.873 +03:00 [INF] Executing RedirectResult, redirecting to /Product/ProductIndex.
+2024-02-25 08:43:13.874 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web) in 16.5164ms
+2024-02-25 08:43:13.874 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:43:13.875 +03:00 [INF] HTTP POST /Product/ProductDelete responded 302 in 20.4467 ms
+2024-02-25 08:43:13.877 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7109/Product/ProductDelete - 302 0 null 25.0478ms
+2024-02-25 08:43:13.882 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Product/ProductIndex - null null
+2024-02-25 08:43:13.885 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web)'
+2024-02-25 08:43:13.885 +03:00 [INF] Route matched with {action = "ProductIndex", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductIndex() on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:43:13.887 +03:00 [INF] Start processing HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:43:13.887 +03:00 [INF] Sending HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:43:13.893 +03:00 [INF] Received HTTP response headers after 4.8746ms - 200
+2024-02-25 08:43:13.894 +03:00 [INF] End processing HTTP request after 7.2408ms - 200
+2024-02-25 08:43:13.895 +03:00 [INF] Executing ViewResult, running view ProductIndex.
+2024-02-25 08:43:13.897 +03:00 [INF] Executed ViewResult - view ProductIndex executed in 2.0722ms.
+2024-02-25 08:43:13.898 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web) in 11.772ms
+2024-02-25 08:43:13.899 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web)'
+2024-02-25 08:43:13.900 +03:00 [INF] HTTP GET /Product/ProductIndex responded 200 in 15.6083 ms
+2024-02-25 08:43:13.902 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Product/ProductIndex - 200 null text/html; charset=utf-8 20.1399ms
+2024-02-25 08:43:13.988 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:43:13.989 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:43:13.992 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.844ms
+2024-02-25 08:43:14.002 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.4125ms
+2024-02-25 08:43:59.571 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Home/Privacy - null null
+2024-02-25 08:43:59.577 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.HomeController.Privacy (Krusty.Web)'
+2024-02-25 08:43:59.578 +03:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Privacy() on controller Krusty.Web.Controllers.HomeController (Krusty.Web).
+2024-02-25 08:43:59.579 +03:00 [INF] Executing ViewResult, running view Privacy.
+2024-02-25 08:43:59.582 +03:00 [INF] Executed ViewResult - view Privacy executed in 2.4465ms.
+2024-02-25 08:43:59.586 +03:00 [INF] Executed action Krusty.Web.Controllers.HomeController.Privacy (Krusty.Web) in 6.8911ms
+2024-02-25 08:43:59.587 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.HomeController.Privacy (Krusty.Web)'
+2024-02-25 08:43:59.588 +03:00 [INF] HTTP GET /Home/Privacy responded 200 in 11.0804 ms
+2024-02-25 08:43:59.589 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Home/Privacy - 200 null text/html; charset=utf-8 19.099ms
+2024-02-25 08:43:59.679 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:43:59.680 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:43:59.683 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 4.1208ms
+2024-02-25 08:43:59.700 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.2953ms
+2024-02-25 08:44:03.033 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Product/ProductIndex - null null
+2024-02-25 08:44:03.036 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web)'
+2024-02-25 08:44:03.037 +03:00 [INF] Route matched with {action = "ProductIndex", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductIndex() on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:44:03.038 +03:00 [INF] Start processing HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:44:03.039 +03:00 [INF] Sending HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:44:03.046 +03:00 [INF] Received HTTP response headers after 6.1893ms - 200
+2024-02-25 08:44:03.047 +03:00 [INF] End processing HTTP request after 8.4808ms - 200
+2024-02-25 08:44:03.048 +03:00 [INF] Executing ViewResult, running view ProductIndex.
+2024-02-25 08:44:03.050 +03:00 [INF] Executed ViewResult - view ProductIndex executed in 2.24ms.
+2024-02-25 08:44:03.052 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web) in 13.2989ms
+2024-02-25 08:44:03.053 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web)'
+2024-02-25 08:44:03.053 +03:00 [INF] HTTP GET /Product/ProductIndex responded 200 in 17.4635 ms
+2024-02-25 08:44:03.055 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Product/ProductIndex - 200 null text/html; charset=utf-8 22.2798ms
+2024-02-25 08:44:03.141 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:44:03.143 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:44:03.145 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.9264ms
+2024-02-25 08:44:03.158 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.1459ms
+2024-02-25 08:44:07.337 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Product/ProductEdit?productId=1 - null null
+2024-02-25 08:44:07.342 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductEdit (Krusty.Web)'
+2024-02-25 08:44:07.345 +03:00 [INF] Route matched with {action = "ProductEdit", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductEdit(Int32) on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:44:07.347 +03:00 [INF] Start processing HTTP request GET https://localhost:7000/api/product/1
+2024-02-25 08:44:07.348 +03:00 [INF] Sending HTTP request GET https://localhost:7000/api/product/1
+2024-02-25 08:44:07.360 +03:00 [INF] Received HTTP response headers after 11.22ms - 200
+2024-02-25 08:44:07.361 +03:00 [INF] End processing HTTP request after 13.7964ms - 200
+2024-02-25 08:44:07.362 +03:00 [INF] Executing ViewResult, running view ProductEdit.
+2024-02-25 08:44:07.373 +03:00 [INF] Executed ViewResult - view ProductEdit executed in 11.4926ms.
+2024-02-25 08:44:07.375 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductEdit (Krusty.Web) in 28.3699ms
+2024-02-25 08:44:07.376 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductEdit (Krusty.Web)'
+2024-02-25 08:44:07.377 +03:00 [INF] HTTP GET /Product/ProductEdit responded 200 in 34.8844 ms
+2024-02-25 08:44:07.379 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Product/ProductEdit?productId=1 - 200 null text/html; charset=utf-8 42.0181ms
+2024-02-25 08:44:07.454 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:44:07.455 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:44:07.457 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.3064ms
+2024-02-25 08:44:07.467 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.8356ms
+2024-02-25 08:44:09.821 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Product/ProductIndex - null null
+2024-02-25 08:44:09.825 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web)'
+2024-02-25 08:44:09.826 +03:00 [INF] Route matched with {action = "ProductIndex", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductIndex() on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:44:09.827 +03:00 [INF] Start processing HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:44:09.828 +03:00 [INF] Sending HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:44:09.832 +03:00 [INF] Received HTTP response headers after 3.4127ms - 200
+2024-02-25 08:44:09.833 +03:00 [INF] End processing HTTP request after 6.1412ms - 200
+2024-02-25 08:44:09.834 +03:00 [INF] Executing ViewResult, running view ProductIndex.
+2024-02-25 08:44:09.837 +03:00 [INF] Executed ViewResult - view ProductIndex executed in 2.3933ms.
+2024-02-25 08:44:09.838 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web) in 10.93ms
+2024-02-25 08:44:09.839 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web)'
+2024-02-25 08:44:09.840 +03:00 [INF] HTTP GET /Product/ProductIndex responded 200 in 15.0623 ms
+2024-02-25 08:44:09.842 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Product/ProductIndex - 200 null text/html; charset=utf-8 20.5345ms
+2024-02-25 08:44:09.923 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:44:09.923 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:44:09.926 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.5416ms
+2024-02-25 08:44:09.936 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.0642ms
+2024-02-25 08:44:11.747 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Product/ProductEdit?productId=3 - null null
+2024-02-25 08:44:11.750 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductEdit (Krusty.Web)'
+2024-02-25 08:44:11.751 +03:00 [INF] Route matched with {action = "ProductEdit", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductEdit(Int32) on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:44:11.753 +03:00 [INF] Start processing HTTP request GET https://localhost:7000/api/product/3
+2024-02-25 08:44:11.754 +03:00 [INF] Sending HTTP request GET https://localhost:7000/api/product/3
+2024-02-25 08:44:11.759 +03:00 [INF] Received HTTP response headers after 3.9032ms - 200
+2024-02-25 08:44:11.759 +03:00 [INF] End processing HTTP request after 6.363ms - 200
+2024-02-25 08:44:11.760 +03:00 [INF] Executing ViewResult, running view ProductEdit.
+2024-02-25 08:44:11.763 +03:00 [INF] Executed ViewResult - view ProductEdit executed in 2.6013ms.
+2024-02-25 08:44:11.764 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductEdit (Krusty.Web) in 11.286ms
+2024-02-25 08:44:11.765 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductEdit (Krusty.Web)'
+2024-02-25 08:44:11.766 +03:00 [INF] HTTP GET /Product/ProductEdit responded 200 in 16.2642 ms
+2024-02-25 08:44:11.768 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Product/ProductEdit?productId=3 - 200 null text/html; charset=utf-8 21.3447ms
+2024-02-25 08:44:11.845 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:44:11.845 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:44:11.848 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.6145ms
+2024-02-25 08:44:11.857 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.3633ms
+2024-02-25 08:44:14.953 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7109/Product/ProductEdit - multipart/form-data; boundary=----WebKitFormBoundaryqQRG4CiMne0LeFL7 1478
+2024-02-25 08:44:14.956 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductEdit (Krusty.Web)'
+2024-02-25 08:44:14.959 +03:00 [INF] Route matched with {action = "ProductEdit", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductEdit(Krusty.Web.Models.ProductDto) on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:44:14.966 +03:00 [INF] Start processing HTTP request PUT https://localhost:7000/api/product
+2024-02-25 08:44:14.967 +03:00 [INF] Sending HTTP request PUT https://localhost:7000/api/product
+2024-02-25 08:44:14.997 +03:00 [INF] Received HTTP response headers after 28.9622ms - 200
+2024-02-25 08:44:14.998 +03:00 [INF] End processing HTTP request after 31.9622ms - 200
+2024-02-25 08:44:14.999 +03:00 [INF] Executing RedirectResult, redirecting to /Product/ProductIndex.
+2024-02-25 08:44:15.000 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductEdit (Krusty.Web) in 39.0971ms
+2024-02-25 08:44:15.001 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductEdit (Krusty.Web)'
+2024-02-25 08:44:15.001 +03:00 [INF] HTTP POST /Product/ProductEdit responded 302 in 45.1927 ms
+2024-02-25 08:44:15.003 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7109/Product/ProductEdit - 302 0 null 50.0941ms
+2024-02-25 08:44:15.007 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Product/ProductIndex - null null
+2024-02-25 08:44:15.011 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web)'
+2024-02-25 08:44:15.011 +03:00 [INF] Route matched with {action = "ProductIndex", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductIndex() on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:44:15.013 +03:00 [INF] Start processing HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:44:15.013 +03:00 [INF] Sending HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:44:15.018 +03:00 [INF] Received HTTP response headers after 3.6316ms - 200
+2024-02-25 08:44:15.019 +03:00 [INF] End processing HTTP request after 6.0535ms - 200
+2024-02-25 08:44:15.020 +03:00 [INF] Executing ViewResult, running view ProductIndex.
+2024-02-25 08:44:15.022 +03:00 [INF] Executed ViewResult - view ProductIndex executed in 2.2624ms.
+2024-02-25 08:44:15.023 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web) in 10.8643ms
+2024-02-25 08:44:15.024 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web)'
+2024-02-25 08:44:15.025 +03:00 [INF] HTTP GET /Product/ProductIndex responded 200 in 14.9439 ms
+2024-02-25 08:44:15.027 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Product/ProductIndex - 200 null text/html; charset=utf-8 20.0274ms
+2024-02-25 08:44:15.106 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:44:15.106 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:44:15.109 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.183ms
+2024-02-25 08:44:15.119 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.4811ms
+2024-02-25 08:44:23.011 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Product/ProductDelete?productId=3 - null null
+2024-02-25 08:44:23.015 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:44:23.016 +03:00 [INF] Route matched with {action = "ProductDelete", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductDelete(Int32) on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:44:23.017 +03:00 [INF] Start processing HTTP request GET https://localhost:7000/api/product/3
+2024-02-25 08:44:23.018 +03:00 [INF] Sending HTTP request GET https://localhost:7000/api/product/3
+2024-02-25 08:44:23.024 +03:00 [INF] Received HTTP response headers after 4.9423ms - 200
+2024-02-25 08:44:23.025 +03:00 [INF] End processing HTTP request after 7.4043ms - 200
+2024-02-25 08:44:23.026 +03:00 [INF] Executing ViewResult, running view ProductDelete.
+2024-02-25 08:44:23.029 +03:00 [INF] Executed ViewResult - view ProductDelete executed in 2.447ms.
+2024-02-25 08:44:23.030 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web) in 12.9256ms
+2024-02-25 08:44:23.031 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:44:23.032 +03:00 [INF] HTTP GET /Product/ProductDelete responded 200 in 17.3076 ms
+2024-02-25 08:44:23.034 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Product/ProductDelete?productId=3 - 200 null text/html; charset=utf-8 22.6784ms
+2024-02-25 08:44:23.111 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:44:23.111 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:44:23.114 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.464ms
+2024-02-25 08:44:23.123 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.9867ms
+2024-02-25 08:44:25.067 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7109/Product/ProductDelete - application/x-www-form-urlencoded 259
+2024-02-25 08:44:25.071 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:44:25.072 +03:00 [INF] Route matched with {action = "ProductDelete", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductDelete(Krusty.Web.Models.ProductDto) on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:44:25.074 +03:00 [INF] Start processing HTTP request DELETE https://localhost:7000/api/product/3
+2024-02-25 08:44:25.075 +03:00 [INF] Sending HTTP request DELETE https://localhost:7000/api/product/3
+2024-02-25 08:44:25.082 +03:00 [INF] Received HTTP response headers after 6.1877ms - 200
+2024-02-25 08:44:25.083 +03:00 [INF] End processing HTTP request after 8.9034ms - 200
+2024-02-25 08:44:25.084 +03:00 [INF] Executing RedirectResult, redirecting to /Product/ProductIndex.
+2024-02-25 08:44:25.085 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web) in 11.3267ms
+2024-02-25 08:44:25.086 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:44:25.087 +03:00 [INF] HTTP POST /Product/ProductDelete responded 302 in 15.8009 ms
+2024-02-25 08:44:25.088 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7109/Product/ProductDelete - 302 0 null 20.7966ms
+2024-02-25 08:44:25.092 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Product/ProductIndex - null null
+2024-02-25 08:44:25.096 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web)'
+2024-02-25 08:44:25.096 +03:00 [INF] Route matched with {action = "ProductIndex", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductIndex() on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:44:25.098 +03:00 [INF] Start processing HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:44:25.099 +03:00 [INF] Sending HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:44:25.103 +03:00 [INF] Received HTTP response headers after 3.9647ms - 200
+2024-02-25 08:44:25.104 +03:00 [INF] End processing HTTP request after 6.6266ms - 200
+2024-02-25 08:44:25.105 +03:00 [INF] Executing ViewResult, running view ProductIndex.
+2024-02-25 08:44:25.108 +03:00 [INF] Executed ViewResult - view ProductIndex executed in 2.3677ms.
+2024-02-25 08:44:25.109 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web) in 11.3792ms
+2024-02-25 08:44:25.110 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web)'
+2024-02-25 08:44:25.111 +03:00 [INF] HTTP GET /Product/ProductIndex responded 200 in 15.2394 ms
+2024-02-25 08:44:25.112 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Product/ProductIndex - 200 null text/html; charset=utf-8 20.1464ms
+2024-02-25 08:44:25.208 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:44:25.208 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:44:25.211 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.6958ms
+2024-02-25 08:44:25.222 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.5031ms
+2024-02-25 08:44:25.751 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Product/ProductDelete?productId=1 - null null
+2024-02-25 08:44:25.755 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:44:25.755 +03:00 [INF] Route matched with {action = "ProductDelete", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductDelete(Int32) on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:44:25.757 +03:00 [INF] Start processing HTTP request GET https://localhost:7000/api/product/1
+2024-02-25 08:44:25.758 +03:00 [INF] Sending HTTP request GET https://localhost:7000/api/product/1
+2024-02-25 08:44:25.763 +03:00 [INF] Received HTTP response headers after 4.2664ms - 200
+2024-02-25 08:44:25.764 +03:00 [INF] End processing HTTP request after 7.0454ms - 200
+2024-02-25 08:44:25.765 +03:00 [INF] Executing ViewResult, running view ProductDelete.
+2024-02-25 08:44:25.767 +03:00 [INF] Executed ViewResult - view ProductDelete executed in 2.5042ms.
+2024-02-25 08:44:25.769 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web) in 11.9598ms
+2024-02-25 08:44:25.770 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:44:25.770 +03:00 [INF] HTTP GET /Product/ProductDelete responded 200 in 15.8834 ms
+2024-02-25 08:44:25.772 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Product/ProductDelete?productId=1 - 200 null text/html; charset=utf-8 20.8744ms
+2024-02-25 08:44:25.853 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:44:25.854 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:44:25.857 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.5411ms
+2024-02-25 08:44:25.866 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.2903ms
+2024-02-25 08:44:26.602 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7109/Product/ProductDelete - application/x-www-form-urlencoded 259
+2024-02-25 08:44:26.606 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:44:26.607 +03:00 [INF] Route matched with {action = "ProductDelete", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductDelete(Krusty.Web.Models.ProductDto) on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:44:26.608 +03:00 [INF] Start processing HTTP request DELETE https://localhost:7000/api/product/1
+2024-02-25 08:44:26.609 +03:00 [INF] Sending HTTP request DELETE https://localhost:7000/api/product/1
+2024-02-25 08:44:26.616 +03:00 [INF] Received HTTP response headers after 6.2078ms - 200
+2024-02-25 08:44:26.617 +03:00 [INF] End processing HTTP request after 8.7692ms - 200
+2024-02-25 08:44:26.618 +03:00 [INF] Executing RedirectResult, redirecting to /Product/ProductIndex.
+2024-02-25 08:44:26.619 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web) in 11.0618ms
+2024-02-25 08:44:26.621 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:44:26.621 +03:00 [INF] HTTP POST /Product/ProductDelete responded 302 in 15.8610 ms
+2024-02-25 08:44:26.623 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7109/Product/ProductDelete - 302 0 null 21.014ms
+2024-02-25 08:44:26.628 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Product/ProductIndex - null null
+2024-02-25 08:44:26.631 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web)'
+2024-02-25 08:44:26.632 +03:00 [INF] Route matched with {action = "ProductIndex", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductIndex() on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:44:26.633 +03:00 [INF] Start processing HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:44:26.634 +03:00 [INF] Sending HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:44:26.639 +03:00 [INF] Received HTTP response headers after 3.6143ms - 200
+2024-02-25 08:44:26.639 +03:00 [INF] End processing HTTP request after 6.3632ms - 200
+2024-02-25 08:44:26.641 +03:00 [INF] Executing ViewResult, running view ProductIndex.
+2024-02-25 08:44:26.643 +03:00 [INF] Executed ViewResult - view ProductIndex executed in 2.1893ms.
+2024-02-25 08:44:26.644 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web) in 11.0904ms
+2024-02-25 08:44:26.645 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web)'
+2024-02-25 08:44:26.646 +03:00 [INF] HTTP GET /Product/ProductIndex responded 200 in 15.0310 ms
+2024-02-25 08:44:26.648 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Product/ProductIndex - 200 null text/html; charset=utf-8 19.7592ms
+2024-02-25 08:44:26.739 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:44:26.739 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:44:26.742 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.197ms
+2024-02-25 08:44:26.752 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.5247ms
+2024-02-25 08:44:27.690 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Product/ProductDelete?productId=2 - null null
+2024-02-25 08:44:27.693 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:44:27.695 +03:00 [INF] Route matched with {action = "ProductDelete", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductDelete(Int32) on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:44:27.696 +03:00 [INF] Start processing HTTP request GET https://localhost:7000/api/product/2
+2024-02-25 08:44:27.697 +03:00 [INF] Sending HTTP request GET https://localhost:7000/api/product/2
+2024-02-25 08:44:27.702 +03:00 [INF] Received HTTP response headers after 3.972ms - 200
+2024-02-25 08:44:27.703 +03:00 [INF] End processing HTTP request after 6.8207ms - 200
+2024-02-25 08:44:27.704 +03:00 [INF] Executing ViewResult, running view ProductDelete.
+2024-02-25 08:44:27.707 +03:00 [INF] Executed ViewResult - view ProductDelete executed in 2.2974ms.
+2024-02-25 08:44:27.708 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web) in 11.7386ms
+2024-02-25 08:44:27.709 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:44:27.711 +03:00 [INF] HTTP GET /Product/ProductDelete responded 200 in 17.5764 ms
+2024-02-25 08:44:27.713 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Product/ProductDelete?productId=2 - 200 null text/html; charset=utf-8 23.4402ms
+2024-02-25 08:44:27.806 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:44:27.807 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:44:27.809 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.506ms
+2024-02-25 08:44:27.819 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.5951ms
+2024-02-25 08:44:28.445 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7109/Product/ProductDelete - application/x-www-form-urlencoded 259
+2024-02-25 08:44:28.448 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:44:28.449 +03:00 [INF] Route matched with {action = "ProductDelete", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductDelete(Krusty.Web.Models.ProductDto) on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:44:28.451 +03:00 [INF] Start processing HTTP request DELETE https://localhost:7000/api/product/2
+2024-02-25 08:44:28.452 +03:00 [INF] Sending HTTP request DELETE https://localhost:7000/api/product/2
+2024-02-25 08:44:28.459 +03:00 [INF] Received HTTP response headers after 6.196ms - 200
+2024-02-25 08:44:28.460 +03:00 [INF] End processing HTTP request after 8.8737ms - 200
+2024-02-25 08:44:28.461 +03:00 [INF] Executing RedirectResult, redirecting to /Product/ProductIndex.
+2024-02-25 08:44:28.462 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web) in 11.5041ms
+2024-02-25 08:44:28.463 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:44:28.463 +03:00 [INF] HTTP POST /Product/ProductDelete responded 302 in 15.2501 ms
+2024-02-25 08:44:28.465 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7109/Product/ProductDelete - 302 0 null 19.9716ms
+2024-02-25 08:44:28.469 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Product/ProductIndex - null null
+2024-02-25 08:44:28.472 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web)'
+2024-02-25 08:44:28.473 +03:00 [INF] Route matched with {action = "ProductIndex", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductIndex() on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:44:28.475 +03:00 [INF] Start processing HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:44:28.476 +03:00 [INF] Sending HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:44:28.480 +03:00 [INF] Received HTTP response headers after 3.2993ms - 200
+2024-02-25 08:44:28.481 +03:00 [INF] End processing HTTP request after 6.0742ms - 200
+2024-02-25 08:44:28.482 +03:00 [INF] Executing ViewResult, running view ProductIndex.
+2024-02-25 08:44:28.484 +03:00 [INF] Executed ViewResult - view ProductIndex executed in 2.0561ms.
+2024-02-25 08:44:28.485 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web) in 10.6979ms
+2024-02-25 08:44:28.486 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web)'
+2024-02-25 08:44:28.487 +03:00 [INF] HTTP GET /Product/ProductIndex responded 200 in 14.6789 ms
+2024-02-25 08:44:28.488 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Product/ProductIndex - 200 null text/html; charset=utf-8 19.2523ms
+2024-02-25 08:44:28.580 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:44:28.584 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:44:28.605 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 25.1742ms
+2024-02-25 08:44:28.618 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.7716ms
+2024-02-25 08:44:29.168 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Product/ProductDelete?productId=4 - null null
+2024-02-25 08:44:29.172 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:44:29.172 +03:00 [INF] Route matched with {action = "ProductDelete", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductDelete(Int32) on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:44:29.174 +03:00 [INF] Start processing HTTP request GET https://localhost:7000/api/product/4
+2024-02-25 08:44:29.174 +03:00 [INF] Sending HTTP request GET https://localhost:7000/api/product/4
+2024-02-25 08:44:29.180 +03:00 [INF] Received HTTP response headers after 4.0714ms - 200
+2024-02-25 08:44:29.181 +03:00 [INF] End processing HTTP request after 6.871ms - 200
+2024-02-25 08:44:29.182 +03:00 [INF] Executing ViewResult, running view ProductDelete.
+2024-02-25 08:44:29.185 +03:00 [INF] Executed ViewResult - view ProductDelete executed in 3.0254ms.
+2024-02-25 08:44:29.186 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web) in 12.5587ms
+2024-02-25 08:44:29.187 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:44:29.188 +03:00 [INF] HTTP GET /Product/ProductDelete responded 200 in 16.8289 ms
+2024-02-25 08:44:29.190 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Product/ProductDelete?productId=4 - 200 null text/html; charset=utf-8 22.4092ms
+2024-02-25 08:44:29.275 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:44:29.276 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:44:29.279 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.3898ms
+2024-02-25 08:44:29.288 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.6353ms
+2024-02-25 08:44:31.110 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7109/Product/ProductDelete - application/x-www-form-urlencoded 259
+2024-02-25 08:44:31.114 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:44:31.114 +03:00 [INF] Route matched with {action = "ProductDelete", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductDelete(Krusty.Web.Models.ProductDto) on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:44:31.116 +03:00 [INF] Start processing HTTP request DELETE https://localhost:7000/api/product/4
+2024-02-25 08:44:31.117 +03:00 [INF] Sending HTTP request DELETE https://localhost:7000/api/product/4
+2024-02-25 08:44:31.123 +03:00 [INF] Received HTTP response headers after 5.1968ms - 200
+2024-02-25 08:44:31.124 +03:00 [INF] End processing HTTP request after 7.8518ms - 200
+2024-02-25 08:44:31.125 +03:00 [INF] Executing RedirectResult, redirecting to /Product/ProductIndex.
+2024-02-25 08:44:31.125 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web) in 10.0142ms
+2024-02-25 08:44:31.127 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductDelete (Krusty.Web)'
+2024-02-25 08:44:31.128 +03:00 [INF] HTTP POST /Product/ProductDelete responded 302 in 14.3645 ms
+2024-02-25 08:44:31.129 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7109/Product/ProductDelete - 302 0 null 19.0374ms
+2024-02-25 08:44:31.134 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Product/ProductIndex - null null
+2024-02-25 08:44:31.137 +03:00 [INF] Executing endpoint 'Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web)'
+2024-02-25 08:44:31.138 +03:00 [INF] Route matched with {action = "ProductIndex", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ProductIndex() on controller Krusty.Web.Controllers.ProductController (Krusty.Web).
+2024-02-25 08:44:31.139 +03:00 [INF] Start processing HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:44:31.140 +03:00 [INF] Sending HTTP request GET https://localhost:7000/api/product
+2024-02-25 08:44:31.144 +03:00 [INF] Received HTTP response headers after 3.1751ms - 200
+2024-02-25 08:44:31.145 +03:00 [INF] End processing HTTP request after 6.2678ms - 200
+2024-02-25 08:44:31.146 +03:00 [INF] Executing ViewResult, running view ProductIndex.
+2024-02-25 08:44:31.148 +03:00 [INF] Executed ViewResult - view ProductIndex executed in 2.1704ms.
+2024-02-25 08:44:31.150 +03:00 [INF] Executed action Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web) in 10.8066ms
+2024-02-25 08:44:31.151 +03:00 [INF] Executed endpoint 'Krusty.Web.Controllers.ProductController.ProductIndex (Krusty.Web)'
+2024-02-25 08:44:31.152 +03:00 [INF] HTTP GET /Product/ProductIndex responded 200 in 14.6446 ms
+2024-02-25 08:44:31.153 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Product/ProductIndex - 200 null text/html; charset=utf-8 18.9402ms
+2024-02-25 08:44:31.238 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 08:44:31.239 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-02-25 08:44:31.241 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.359ms
+2024-02-25 08:44:31.252 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.0271ms

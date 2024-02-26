@@ -2,6 +2,7 @@ using Krusty.Web.Service;
 using Krusty.Web.Service.IService;
 using Krusty.Web.Utility;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,11 +38,11 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 });
 
 
-//Log.Logger = new LoggerConfiguration()
-//    .WriteTo.Console()
-//    .WriteTo.File("log-.txt", rollingInterval: RollingInterval.Day)
-//    .CreateLogger();
-//builder.Host.UseSerilog();
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("log-.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+builder.Host.UseSerilog();
 
 var app = builder.Build();
 
@@ -53,7 +54,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-//app.UseSerilogRequestLogging();
+app.UseSerilogRequestLogging();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

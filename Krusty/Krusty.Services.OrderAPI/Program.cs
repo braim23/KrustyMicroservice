@@ -10,6 +10,7 @@ using Krusty.Services.ShoppingCartAPI.Service.IService;
 using Krusty.MessageBus;
 using Krusty.Services.OrderAPI.Extensions;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -72,12 +73,12 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
 });
 
 
-//Log.Logger = new LoggerConfiguration()
-//    .WriteTo.Console()
-//    .WriteTo.File("Logs/log-.txt", rollingInterval: RollingInterval.Day)
-//    .CreateLogger();
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("Logs/log-.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
 
-//builder.Host.UseSerilog();
+builder.Host.UseSerilog();
 
 var app = builder.Build();
 
@@ -91,7 +92,7 @@ if (app.Environment.IsDevelopment())
 Stripe.StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey").Get<string>();
 
 
-//app.UseSerilogRequestLogging();
+app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

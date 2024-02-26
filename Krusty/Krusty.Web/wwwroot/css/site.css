@@ -20,3 +20,10 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+keyboard-img {
+    width: 600px !important;
+    height: 200px !important;
+    max-width: 600px !important;
+    max-height: 200px !important;
+}

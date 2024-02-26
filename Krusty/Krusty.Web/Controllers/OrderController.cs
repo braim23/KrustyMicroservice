@@ -1,6 +1,7 @@
 ﻿using Krusty.Web.Models;
 using Krusty.Web.Service.IService;
 using Krusty.Web.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Collections.Generic;
@@ -16,10 +17,12 @@ public class OrderController : Controller
     {
         _orderService = orderService;
     }
+    [Authorize]
     public IActionResult OrderIndex()
     {
         return View();
     }
+    [Authorize]
     public async Task<IActionResult> OrderDetail(int orderId)
     {
         OrderHeaderDto orderHeaderDto = new OrderHeaderDto();

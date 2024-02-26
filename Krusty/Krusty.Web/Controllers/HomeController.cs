@@ -35,7 +35,7 @@ namespace Krusty.Web.Controllers
 			}
 			return View(list);
 		}
-        [Authorize]
+        
         public async Task<IActionResult> ProductDetails(int productId)
         {
             ProductDto? productDtoModel = new();
